@@ -4,24 +4,24 @@ use quanlykhachsan;
 go
 CREATE TABLE NguoiDung (
 	MaSo INT NOT NULL IDENTITY(1,1),
-	HoTen varchar(50) NOT NULL,
-	LoaiNguoiDung varchar(30) NOT NULL,
+	HoTen nvarchar(50) NOT NULL,
+	LoaiNguoiDung nvarchar(30) NOT NULL,
 	TenDangNhap varchar(30) NOT NULL,
 	MatKhau varchar(30) NOT NULL,
 	PRIMARY KEY (MaSo)
 );
 go
 CREATE TABLE PhanQuyen (
-	LoaiNguoiDung varchar(30) NOT NULL,
+	LoaiNguoiDung nvarchar(30) NOT NULL,
 	MucDo INT NOT NULL,
 	PRIMARY KEY (LoaiNguoiDung)
 );
 go
 CREATE TABLE KhachHang (
 	MaKhach INT NOT NULL IDENTITY(1,1),
-	TenKhach varchar(30) NOT NULL,
+	TenKhach nvarchar(30) NOT NULL,
 	SoCMND varchar(20) NOT NULL,
-	DiaChi varchar(50) NOT NULL,
+	DiaChi nvarchar(50) NOT NULL,
 	DienThoai varchar(20) NOT NULL,
 	LoaiKhach INT NOT NULL,
 	PRIMARY KEY (MaKhach)
@@ -32,32 +32,32 @@ CREATE TABLE Phong (
 	LoaiPhong varchar(10) NOT NULL,
 	TinhTrang INT NOT NULL,
 	TrangThai INT NOT NULL,
-	GhiChu varchar(50) NOT NULL,
+	GhiChu nvarchar(50) NOT NULL,
 	PRIMARY KEY (MaPhong)
 );
 go
 CREATE TABLE LoaiKhach (
 	MaLoai INT NOT NULL IDENTITY(1,1),
-	LoaiKhach varchar(20) NOT NULL,
+	LoaiKhach nvarchar(20) NOT NULL,
 	PRIMARY KEY (MaLoai)
 );
 go
 CREATE TABLE TinhTrangPhong (
 	MaTT INT NOT NULL IDENTITY(1,1),
-	TinhTrang varchar(20) NOT NULL,
+	TinhTrang nvarchar(20) NOT NULL,
 	PRIMARY KEY (MaTT)
 );
 go
 CREATE TABLE TrangThaiPhong (
 	MaTT INT NOT NULL IDENTITY(1,1),
-	TrangThai varchar(20) NOT NULL,
+	TrangThai nvarchar(20) NOT NULL,
 	PRIMARY KEY (MaTT)
 );
 go
 CREATE TABLE LoaiPhong (
 	MaLoai varchar(10) NOT NULL,
-	TenLoai varchar(20) NOT NULL,
-	MoTa varchar(50) NOT NULL,
+	TenLoai nvarchar(20) NOT NULL,
+	MoTa nvarchar(50) NOT NULL,
 	DonGia FLOAT NOT NULL,
 	SoNguoiToiDa INT NOT NULL,
 	PRIMARY KEY (MaLoai)
@@ -65,9 +65,9 @@ CREATE TABLE LoaiPhong (
 go
 CREATE TABLE DichVu (
 	MaDV INT NOT NULL IDENTITY(1,1),
-	TenDV varchar(20) NOT NULL,
+	TenDV nvarchar(20) NOT NULL,
 	DonGia FLOAT NOT NULL,
-	GhiChu varchar(50) NOT NULL,
+	GhiChu nvarchar(50) NOT NULL,
 	PRIMARY KEY (MaDV)
 );
 go
@@ -108,7 +108,7 @@ CREATE TABLE HoaDon (
 go
 CREATE TABLE BangThamSo (
 	MaTS INT NOT NULL IDENTITY(1,1),
-	TenTS varchar(30) NOT NULL,
+	TenTS nvarchar(50) NOT NULL,
 	KieuDuLieu varchar(15) NOT NULL,
 	GiaTri varchar(15) NOT NULL,
 	ConHieuLuc bit NOT NULL,
