@@ -26,6 +26,17 @@ namespace QLKS
             InitializeComponent();
             DataTable table = LoaiPhongDAO.LoadAll();
             dataGrid.ItemsSource = table.DefaultView;
+
+            
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            LoaiPhong lp = new LoaiPhong("c", "test", "test", 1, 2);
+            txtbox.Text = LoaiPhongDAO.Insert(lp).ToString();
+
+            DataTable table = LoaiPhongDAO.LoadAll();
+            dataGrid.ItemsSource = table.DefaultView;
         }
     }
 }
