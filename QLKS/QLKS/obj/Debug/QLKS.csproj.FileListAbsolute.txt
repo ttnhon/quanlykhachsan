@@ -1,0 +1,15 @@
+D:\HK2 nam ba\PTTKPM\quanlykhachsan\QLKS\QLKS\bin\Debug\QLKS.exe.config
+D:\HK2 nam ba\PTTKPM\quanlykhachsan\QLKS\QLKS\bin\Debug\QLKS.exe
+D:\HK2 nam ba\PTTKPM\quanlykhachsan\QLKS\QLKS\bin\Debug\QLKS.pdb
+D:\HK2 nam ba\PTTKPM\quanlykhachsan\QLKS\QLKS\obj\Debug\QLKS.csprojResolveAssemblyReference.cache
+D:\HK2 nam ba\PTTKPM\quanlykhachsan\QLKS\QLKS\obj\Debug\MainWindow.g.cs
+D:\HK2 nam ba\PTTKPM\quanlykhachsan\QLKS\QLKS\obj\Debug\App.g.cs
+D:\HK2 nam ba\PTTKPM\quanlykhachsan\QLKS\QLKS\obj\Debug\QLKS_MarkupCompile.cache
+D:\HK2 nam ba\PTTKPM\quanlykhachsan\QLKS\QLKS\obj\Debug\QLKS_MarkupCompile.lref
+D:\HK2 nam ba\PTTKPM\quanlykhachsan\QLKS\QLKS\obj\Debug\MainWindow.baml
+D:\HK2 nam ba\PTTKPM\quanlykhachsan\QLKS\QLKS\obj\Debug\QLKS.g.resources
+D:\HK2 nam ba\PTTKPM\quanlykhachsan\QLKS\QLKS\obj\Debug\QLKS.Properties.Resources.resources
+D:\HK2 nam ba\PTTKPM\quanlykhachsan\QLKS\QLKS\obj\Debug\QLKS.csproj.GenerateResource.Cache
+D:\HK2 nam ba\PTTKPM\quanlykhachsan\QLKS\QLKS\obj\Debug\QLKS.csproj.CoreCompileInputs.cache
+D:\HK2 nam ba\PTTKPM\quanlykhachsan\QLKS\QLKS\obj\Debug\QLKS.exe
+D:\HK2 nam ba\PTTKPM\quanlykhachsan\QLKS\QLKS\obj\Debug\QLKS.pdb
