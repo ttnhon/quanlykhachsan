@@ -24,6 +24,7 @@ namespace QLKS
         public MainWindow()
         {
             InitializeComponent();
+<<<<<<< HEAD
             DataTable table = LoaiPhongDAO.LoadAll();
             dataGrid.ItemsSource = table.DefaultView;
 
@@ -37,6 +38,12 @@ namespace QLKS
 
             DataTable table = LoaiPhongDAO.LoadAll();
             dataGrid.ItemsSource = table.DefaultView;
+=======
+            DangNhap dangnhap = new DangNhap();
+            dangnhap.Show();
+            //DataTable table = LoaiPhongDAO.LoadAll();
+            //dataGrid.ItemsSource = table.DefaultView;
+>>>>>>> a21f0a51414cf7c08f2c64143c7a11a61e0a5840
         }
     }
 }
