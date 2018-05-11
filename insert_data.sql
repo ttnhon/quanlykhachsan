@@ -29,11 +29,15 @@ values (N'Khách trong phòng'), (N'Khách ra ngoài'), (N'Đang dọn dẹp'), 
 go
 --Insert <LoaiPhong>
 insert into LoaiPhong(MaLoai, TenLoai, MoTa, DonGia, SoNguoiToiDa)
-values  ('1',N'thường',N'Loại phòng phổ thông',500000,3),
-		('2',N'chuẩn',N'Loại phòng trung lưu, tiện nghi khá',1000000,2),
-		('3',N'tầm nhìn đẹp',N'Tầm nhìn đẹp và thoáng đãng',1200000,2),
-		('4',N'cặp đôi',N'Dành cho cặp đôi',700000,2),
-		('5',N'vip',N'Chuẩn cao cấp, tiện nghi sang trọng',1500000,2)
+values  ('STD A', N'Standard A', N'2 giường đơn / 1 giường đôi', 680000, 2),
+		('STD B', N'Standard B', N'3 giường đơn / 1 giường đôi + 1 giường đơn', 850000, 3),
+		('STD C', N'Standard C', N'4 giường đơn / 2 giường đôi', 910000, 4),
+		('SUP A', N'Superior A', N'Chất lượng cao hơn Standard, 2 giường đơn/1 giường đôi', 890000, 2),
+		('SUP B', N'Superior B', N'Chất lượng cao hơn Standard, 3 giường đơn / 1 giường đôi + 1 giường đơn', 910000, 3),
+		('SUP C', N'Superior C', N'Chất lượng cao hơn Standard, 2 giường đơn + 1 giường đôi', 1100000, 4),
+		('DLX', N'Deluxe',N'Chất lượng cao hơn Superior, 2 giường đơn / 1 giường đôi', 1100000, 2),
+		('SUT A', N'Suite A',N'Chất lượng cao hơn Deluxe, 1 phòng ngủ + 1 phòng khách', 1500000, 2),
+		('SUT B', N'Suite B',N'Chất lượng cao hơn Deluxe, 2 phòng ngủ + 1 phòng khách', 1700000, 4)
 
 --Insert <DichVu>
 insert into DichVu(TenDV, DonGia, GhiChu)
