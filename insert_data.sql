@@ -2,6 +2,9 @@
 use quanlykhachsan
 go
 
+alter table LoaiPhong add ConSuDung bit;
+alter table DichVu add ConSuDung bit;
+
 insert into PhanQuyen(LoaiNguoiDung, MucDo)
 values	(N'Giám đốc', 1),
 		(N'Quản lý', 2),
