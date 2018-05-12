@@ -60,6 +60,7 @@ CREATE TABLE LoaiPhong (
 	MoTa nvarchar(50) NOT NULL,
 	DonGia FLOAT NOT NULL,
 	SoNguoiToiDa INT NOT NULL,
+	ConSuDung bit NOT NULL,
 	PRIMARY KEY (MaLoai)
 );
 go
@@ -68,6 +69,7 @@ CREATE TABLE DichVu (
 	TenDV nvarchar(20) NOT NULL,
 	DonGia FLOAT NOT NULL,
 	GhiChu nvarchar(50) NOT NULL,
+	ConSuDung bit NOT NULL,
 	PRIMARY KEY (MaDV)
 );
 go
