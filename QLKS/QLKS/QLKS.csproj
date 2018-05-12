@@ -54,6 +54,21 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Quanlydichvu.xaml.cs">
+      <DependentUpon>Quanlydichvu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Quanlykhachhang.xaml.cs">
+      <DependentUpon>Quanlykhachhang.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Quanlyloaiphong.xaml.cs">
+      <DependentUpon>Quanlyloaiphong.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Quanlyphong.xaml.cs">
+      <DependentUpon>Quanlyphong.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Trangchu.xaml.cs">
+      <DependentUpon>Trangchu.xaml</DependentUpon>
+    </Compile>
     <Page Include="DangNhap.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -75,6 +90,26 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Quanlydichvu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Quanlykhachhang.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Quanlyloaiphong.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Quanlyphong.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Trangchu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -104,6 +139,27 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Hinh\login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Hinh\icons8-booking-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Hinh\icons8-bed-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Hinh\icons8-hotel-bed-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Hinh\icons8-contacts-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Hinh\icons8-waiter-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Hinh\icons8-hotel-check-in-100.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,0 +1,61 @@
+﻿<Window x:Class="QLKS.Trangchu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:QLKS"
+        mc:Ignorable="d"
+        Title="Trang chủ" Height="350" Width="525">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="15*"/>
+            <RowDefinition Height="54*"/>
+            <RowDefinition Height="56*"/>
+
+        </Grid.RowDefinitions>
+        <Canvas HorizontalAlignment="Left" Height="38" VerticalAlignment="Top" Width="518">
+            <Label Content="Xin chào" HorizontalAlignment="Left" Height="24" VerticalAlignment="Top" Width="54" Canvas.Left="382"/>
+            <Label Content="Label" HorizontalAlignment="Left" Height="24" VerticalAlignment="Top" Width="72" Canvas.Left="436"/>
+        </Canvas>
+        <Canvas HorizontalAlignment="Left" Height="139" Margin="0,38,0,0" VerticalAlignment="Top" Width="518" Grid.RowSpan="3">
+            <Button Canvas.Left="10" Canvas.Top="10" Width="133" Height="119" Background="{x:Null}" BorderBrush="{x:Null}">
+                <StackPanel Height="109" Width="132">
+                    <Image Height="78" Source="Hinh/icons8-hotel-check-in-100.png"/>
+                    <Label Content="THUÊ PHÒNG" HorizontalAlignment="Center" FontSize="16" FontWeight="Bold"/>
+                </StackPanel>
+            </Button>
+            <Button Canvas.Left="185" Canvas.Top="10" Width="133" Height="119" Background="{x:Null}" BorderBrush="{x:Null}">
+                <StackPanel Height="109" Width="132">
+                    <Image Height="85" Source="Hinh/icons8-hotel-bed-100.png"/>
+                    <Label Content="QUẢN LÝ PHÒNG" HorizontalAlignment="Center" FontSize="14" FontWeight="Bold" Margin="4,0,0,0" Height="33" Width="128"/>
+                </StackPanel>
+            </Button>
+            <Button Canvas.Left="343" Canvas.Top="10" Width="166" Height="119" Background="{x:Null}" BorderBrush="{x:Null}">
+                <StackPanel Height="109" Width="166">
+                    <Image Height="83" Source="Hinh/icons8-bed-100.png" Margin="0,0,0.4,0"/>
+                    <Label Content="QUẢN LÝ LOẠI PHÒNG" HorizontalAlignment="Center" FontSize="14" FontWeight="Bold"/>
+                </StackPanel>
+            </Button>
+        </Canvas>
+        <Canvas HorizontalAlignment="Left" Height="144" Margin="0,0.2,0,-0.2" Grid.Row="2" VerticalAlignment="Top" Width="518" RenderTransformOrigin="0.53,0.504">
+            <Button Canvas.Left="10" Canvas.Top="10" Width="133" Height="119" Background="{x:Null}" BorderBrush="{x:Null}">
+                <StackPanel Height="109" Width="132">
+                    <Image Height="78" Source="Hinh/icons8-contacts-100.png"/>
+                    <Label Content="KHÁCH HÀNG" HorizontalAlignment="Center" FontSize="16" FontWeight="Bold"/>
+                </StackPanel>
+            </Button>
+            <Button Canvas.Left="182" Canvas.Top="10" Width="133" Height="119" Background="{x:Null}" BorderBrush="{x:Null}">
+                <StackPanel Height="109" Width="132">
+                    <Image Height="78" Source="Hinh/icons8-waiter-100.png"/>
+                    <Label Content="DỊCH VỤ" HorizontalAlignment="Center" FontSize="16" FontWeight="Bold"/>
+                </StackPanel>
+            </Button>
+            <Button Canvas.Left="364" Canvas.Top="10" Width="133" Height="119" Background="{x:Null}" BorderBrush="{x:Null}">
+                <StackPanel Height="109" Width="132">
+                    <Image Height="78" Source="Hinh/icons8-booking-100.png"/>
+                    <Label Content="ĐẶT PHÒNG" HorizontalAlignment="Center" FontSize="16" FontWeight="Bold"/>
+                </StackPanel>
+            </Button>
+        </Canvas>
+    </Grid>
+</Window>
