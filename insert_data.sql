@@ -4,6 +4,7 @@ go
 
 alter table LoaiPhong add ConSuDung bit;
 alter table DichVu add ConSuDung bit;
+alter table LoaiPhong alter column MoTa nvarchar(150)
 
 insert into PhanQuyen(LoaiNguoiDung, MucDo)
 values	(N'Giám đốc', 1),
