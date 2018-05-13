@@ -28,7 +28,7 @@ CREATE TABLE KhachHang (
 );
 go
 CREATE TABLE Phong (
-	MaPhong INT NOT NULL IDENTITY(1,1),
+	MaPhong INT NOT NULL,
 	LoaiPhong varchar(10) NOT NULL,
 	TinhTrang INT NOT NULL,
 	TrangThai INT NOT NULL,
@@ -57,7 +57,7 @@ go
 CREATE TABLE LoaiPhong (
 	MaLoai varchar(10) NOT NULL,
 	TenLoai nvarchar(20) NOT NULL,
-	MoTa nvarchar(50) NOT NULL,
+	MoTa nvarchar(150) NOT NULL,
 	DonGia FLOAT NOT NULL,
 	SoNguoiToiDa INT NOT NULL,
 	ConSuDung bit NOT NULL,

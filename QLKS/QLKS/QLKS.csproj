@@ -54,6 +54,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="DatPhong.cs" />
+    <Compile Include="DatPhongDAO.cs" />
     <Compile Include="DichVu.cs" />
     <Compile Include="DichVuDAO.cs" />
     <Compile Include="KhachHang.cs" />
@@ -62,6 +64,8 @@
     <Compile Include="LoaiKhachDAO.cs" />
     <Compile Include="NguoiDung.cs" />
     <Compile Include="NguoiDungDAO.cs" />
+    <Compile Include="Phong.cs" />
+    <Compile Include="PhongDAO.cs" />
     <Compile Include="Quanlydichvu.xaml.cs">
       <DependentUpon>Quanlydichvu.xaml</DependentUpon>
     </Compile>

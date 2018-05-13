@@ -26,11 +26,11 @@ namespace QLKS
             InitializeComponent();
             //DataTable table = LoaiPhongDAO.LoadAll();
             //dataGrid.ItemsSource = table.DefaultView;
-            DataTable table = DichVuDAO.LoadAll();
+            DataTable table = PhongDAO.LoadAll();
             dataGrid.ItemsSource = table.DefaultView;
 
-            DichVu dv = DichVuDAO.LoadOne(3);
-            txtbox.Text = dv.DonGia.ToString();
+            //DichVu dv = DichVuDAO.LoadOne(3);
+            //txtbox.Text = dv.DonGia.ToString();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

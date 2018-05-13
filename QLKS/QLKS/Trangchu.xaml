@@ -50,12 +50,7 @@
                     <Label Content="DỊCH VỤ" HorizontalAlignment="Center" FontSize="16" FontWeight="Bold"/>
                 </StackPanel>
             </Button>
-            <Button Canvas.Left="364" Canvas.Top="10" Width="133" Height="119" Background="{x:Null}" BorderBrush="{x:Null}">
-                <StackPanel Height="109" Width="132">
-                    <Image Height="78" Source="Hinh/icons8-booking-100.png"/>
-                    <Label Content="ĐẶT PHÒNG" HorizontalAlignment="Center" FontSize="16" FontWeight="Bold"/>
-                </StackPanel>
-            </Button>
+            <Button Canvas.Left="364" Canvas.Top="10" Width="133" Height="119" Background="{x:Null}" BorderBrush="{x:Null}"/>
         </Canvas>
     </Grid>
 </Window>
