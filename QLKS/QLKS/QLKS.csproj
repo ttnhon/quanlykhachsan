@@ -54,6 +54,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="DichVu.cs" />
+    <Compile Include="DichVuDAO.cs" />
+    <Compile Include="KhachHang.cs" />
+    <Compile Include="KhachHangDAO.cs" />
+    <Compile Include="LoaiKhach.cs" />
+    <Compile Include="LoaiKhachDAO.cs" />
+    <Compile Include="NguoiDung.cs" />
+    <Compile Include="NguoiDungDAO.cs" />
     <Compile Include="Quanlydichvu.xaml.cs">
       <DependentUpon>Quanlydichvu.xaml</DependentUpon>
     </Compile>
