@@ -169,5 +169,17 @@
   <ItemGroup>
     <Resource Include="Hinh\icons8-hotel-check-in-100.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Hinh\icons8-home-page-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Hinh\icons8-add-new-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Hinh\icons8-close-window-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Hinh\icons8-google-web-search-100.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
