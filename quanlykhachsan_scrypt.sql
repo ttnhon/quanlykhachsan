@@ -7,7 +7,7 @@ CREATE TABLE NguoiDung (
 	HoTen nvarchar(50) NOT NULL,
 	LoaiNguoiDung nvarchar(30) NOT NULL,
 	TenDangNhap varchar(30) NOT NULL,
-	MatKhau varchar(30) NOT NULL,
+	MatKhau varchar(33) NOT NULL,
 	PRIMARY KEY (MaSo)
 );
 go

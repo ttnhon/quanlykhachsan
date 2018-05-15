@@ -9,9 +9,9 @@ values	(N'Giám đốc', 1),
 go
 --Insert <NguoiDung>
 insert into NguoiDung(HoTen, LoaiNguoiDung, TenDangNhap, MatKhau)
-values	(N'Trương Thành Nhơn', N'Giám đốc', 'ttnhon', '1'),
-		(N'Huỳnh Phi Phúc', N'Quản lý', 'hpphuc', '1'),
-		(N'Nguyễn Văn Phúc', N'Nhân viên', 'nvphuc', '1')
+values	(N'Trương Thành Nhơn', N'Giám đốc', 'ttnhon', '2029b962ac59075b964b07152d234b70'),
+		(N'Huỳnh Phi Phúc', N'Quản lý', 'hpphuc', '2029b962ac59075b964b07152d234b70'),
+		(N'Nguyễn Văn Phúc', N'Nhân viên', 'nvphuc', '2029b962ac59075b964b07152d234b70')
 go
 --Insert <LoaiKhach>
 insert into LoaiKhach(LoaiKhach)

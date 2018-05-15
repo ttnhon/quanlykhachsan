@@ -19,9 +19,13 @@ namespace QLKS
     /// </summary>
     public partial class Trangchu : Window
     {
-        public Trangchu()
+        string name, account;
+        public Trangchu(string name, string account)
         {
             InitializeComponent();
+            this.name = name;
+            this.account = account;
+            LabelName.Content = name;
         }
     }
 }
