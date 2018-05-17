@@ -15,7 +15,7 @@
         </Grid.RowDefinitions>
         <Canvas HorizontalAlignment="Left" Height="38" VerticalAlignment="Top" Width="518">
             <Label Content="Xin chào:" HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="62" Canvas.Left="324"/>
-            <Label x:Name="LabelName" Content="Label" HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="117" Canvas.Left="386" FontWeight="Bold"/>
+            <Label x:Name="LabelName" Content="Label" HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="128" Canvas.Left="380" FontWeight="Bold"/>
         </Canvas>
         <Canvas HorizontalAlignment="Left" Height="139" Margin="0,38,0,0" VerticalAlignment="Top" Width="518" Grid.RowSpan="3">
             <Button Canvas.Left="10" Canvas.Top="10" Width="133" Height="119" Background="{x:Null}" BorderBrush="{x:Null}">

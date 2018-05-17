@@ -58,6 +58,7 @@
     <Compile Include="DatPhongDAO.cs" />
     <Compile Include="DichVu.cs" />
     <Compile Include="DichVuDAO.cs" />
+    <Compile Include="Helper\HashPassword.cs" />
     <Compile Include="KhachHang.cs" />
     <Compile Include="KhachHangDAO.cs" />
     <Compile Include="LoaiKhach.cs" />
