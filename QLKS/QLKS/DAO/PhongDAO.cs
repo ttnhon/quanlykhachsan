@@ -5,15 +5,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
+using QLKS.DTO;
 
-namespace QLKS
+namespace QLKS.DAO
 {
-    class PhongDAO
+    public class PhongDAO
     {
         static public DataTable LoadAll()
         {
             SqlConnection cnn = new SqlConnection(App.sConnB.ConnectionString);
-            string sql = "select * from Phong";
+            string sql = "select p.MaPhong,lp.TenLoai,tt.TinhTrang,tth.TrangThai " +
+                "from Phong p join LoaiPhong lp on p.LoaiPhong = lp.MaLoai " +
+                "join TinhTrangPhong tt on p.TinhTrang = tt.MaTT " +
+                "join TrangThaiPhong tth on p.TrangThai = tth.MaTT";
             SqlDataAdapter da = new SqlDataAdapter(sql, cnn);
             DataTable table = new DataTable();
             da.Fill(table);

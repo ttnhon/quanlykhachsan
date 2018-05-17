@@ -3,9 +3,8 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:QLKS"
         mc:Ignorable="d"
-        Title="Trang chủ" Height="350" Width="525">
+        Title="Trang chủ" Height="600" Width="900" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="15*"/>
@@ -13,49 +12,51 @@
             <RowDefinition Height="56*"/>
 
         </Grid.RowDefinitions>
-        <Canvas HorizontalAlignment="Left" Height="38" VerticalAlignment="Top" Width="518">
-            <Label Content="Xin chào:" HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="62" Canvas.Left="324"/>
-            <Label x:Name="LabelName" Content="Label" HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="128" Canvas.Left="380" FontWeight="Bold"/>
-        </Canvas>
-        <Canvas HorizontalAlignment="Left" Height="139" Margin="0,38,0,0" VerticalAlignment="Top" Width="518" Grid.RowSpan="3">
-            <Button x:Name="btnThuePhong" Canvas.Left="10" Canvas.Top="10" Width="133" Height="119" Background="{x:Null}" BorderBrush="{x:Null}">
-                <StackPanel Height="109" Width="132">
-                    <Image Height="83" Source="Hinh/icons8-hotel-check-in-100.png"/>
-                    <Label Content="THUÊ PHÒNG" HorizontalAlignment="Center" FontSize="14" FontWeight="Bold"/>
-                </StackPanel>
-            </Button>
-            <Button x:Name="btnQuanLyPhong" Canvas.Left="185" Canvas.Top="10" Width="133" Height="119" Background="{x:Null}" BorderBrush="{x:Null}">
-                <StackPanel Height="109" Width="132">
-                    <Image Height="83" Source="Hinh/icons8-hotel-bed-100.png"/>
-                    <Label Content="QUẢN LÝ PHÒNG" HorizontalAlignment="Center" FontSize="14" FontWeight="Bold" Margin="4,0,0,0" Height="33" Width="128"/>
-                </StackPanel>
-            </Button>
-            <Button x:Name="btnLoaiPhong" Canvas.Left="343" Canvas.Top="10" Width="166" Height="119" Background="{x:Null}" BorderBrush="{x:Null}" Cursor="">
-                <StackPanel Height="109" Width="166">
-                    <Image Height="83" Source="Hinh/icons8-bed-100.png" Margin="0,0,0.4,0"/>
-                    <Label Content="QUẢN LÝ LOẠI PHÒNG" HorizontalAlignment="Center" FontSize="14" FontWeight="Bold"/>
-                </StackPanel>
-            </Button>
-        </Canvas>
-        <Canvas HorizontalAlignment="Left" Height="144" Margin="0,0.2,0,-0.2" Grid.Row="2" VerticalAlignment="Top" Width="518" RenderTransformOrigin="0.53,0.504">
-            <Button x:Name="btnKhachHang" Canvas.Left="10" Canvas.Top="10" Width="133" Height="119" Background="{x:Null}" BorderBrush="{x:Null}">
-                <StackPanel Height="109" Width="132">
-                    <Image Height="78" Source="Hinh/icons8-contacts-100.png"/>
-                    <Label Content="KHÁCH HÀNG" HorizontalAlignment="Center" FontSize="16" FontWeight="Bold"/>
-                </StackPanel>
-            </Button>
-            <Button x:Name="btnDichVu" Canvas.Left="182" Canvas.Top="10" Width="133" Height="119" Background="{x:Null}" BorderBrush="{x:Null}">
-                <StackPanel Height="109" Width="132">
-                    <Image Height="78" Source="Hinh/icons8-waiter-100.png"/>
-                    <Label Content="DỊCH VỤ" HorizontalAlignment="Center" FontSize="16" FontWeight="Bold"/>
-                </StackPanel>
-            </Button>
-            <Button x:Name="btnDangXuat" Canvas.Left="364" Canvas.Top="10" Width="133" Height="119" Background="{x:Null}" BorderBrush="{x:Null}">
-                <StackPanel Height="109" Width="132">
-                    <Image Height="78" Source="/Hinh/icons8-exit-100.png"/>
-                    <Label Content="ĐĂNG XUẤT" HorizontalAlignment="Center" FontSize="16" FontWeight="Bold"/>
-                </StackPanel>
-            </Button>
-        </Canvas>
+        <WrapPanel Height="69" VerticalAlignment="Top" Width="894" Margin="0,0,-0.4,0" Grid.RowSpan="2" HorizontalAlignment="Left">
+            <Label Content="Xin chào:" HorizontalAlignment="Left" Height="69" VerticalAlignment="Top" Width="160" FontSize="36" VerticalContentAlignment="Center"/>
+            <Label x:Name="LabelName" Content="Label" HorizontalAlignment="Left" Height="69" VerticalAlignment="Top" Width="733" FontWeight="Bold" FontSize="36" VerticalContentAlignment="Center"/>
+        </WrapPanel>
+        <StackPanel Margin="0,0.2,-0.4,0.4" Orientation="Vertical" Grid.Row="1" Grid.RowSpan="2">
+            <DockPanel HorizontalAlignment="Left" Height="246" VerticalAlignment="Top" Width="894">
+                <Button x:Name="btnThuePhong" Width="303" Background="{x:Null}" BorderBrush="{x:Null}" Margin="0,0,0,0.4">
+                    <StackPanel Height="244" Width="303">
+                        <Image Height="150" Source="/QLKS;component/Hinh/icons8-hotel-check-in-100.png" Margin="0,0,0.2,0"/>
+                        <Label Content="THUÊ PHÒNG" HorizontalAlignment="Center" FontSize="24" FontWeight="Bold" Height="92" Margin="0,0,0.2,0" Width="303" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                    </StackPanel>
+                </Button>
+                <Button x:Name="btnQuanLyPhong" Width="299" Background="{x:Null}" BorderBrush="{x:Null}" Click="btnQuanLyPhong_Click" Margin="0,0,0,0.4">
+                    <StackPanel Height="243" Width="296">
+                        <Image Height="150" Source="/QLKS;component/Hinh/icons8-hotel-bed-100.png"/>
+                        <Label Content="QUẢN LÝ PHÒNG" HorizontalAlignment="Center" FontSize="24" FontWeight="Bold" Height="93" Width="296" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" UseLayoutRounding="False"/>
+                    </StackPanel>
+                </Button>
+                <Button x:Name="btnLoaiPhong" Width="292" Background="{x:Null}" BorderBrush="{x:Null}" Cursor="" Margin="0,0,0,0.4">
+                    <StackPanel Height="244" Width="291">
+                        <Image Height="150" Source="/QLKS;component/Hinh/icons8-bed-100.png" Margin="0,0,0.2,0"/>
+                        <Label Content="QUẢN LÝ LOẠI PHÒNG" HorizontalAlignment="Center" FontSize="24" FontWeight="Bold" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Height="93" Margin="0,0,0.2,0" Width="291"/>
+                    </StackPanel>
+                </Button>
+            </DockPanel>
+            <DockPanel HorizontalAlignment="Left" Height="255" VerticalAlignment="Top" Width="894" RenderTransformOrigin="0.53,0.504">
+                <Button x:Name="btnKhachHang" Width="301" Background="{x:Null}" BorderBrush="{x:Null}" Margin="0,0,0,0.2">
+                    <StackPanel Height="255" Width="298">
+                        <Image Height="150" Source="/QLKS;component/Hinh/icons8-contacts-100.png" Margin="0,0,-0.4,0"/>
+                        <Label Content="KHÁCH HÀNG" HorizontalAlignment="Center" FontSize="24" FontWeight="Bold" Height="104" Margin="0,0,-0.4,0" Width="298" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                    </StackPanel>
+                </Button>
+                <Button x:Name="btnDichVu" Width="299" Background="{x:Null}" BorderBrush="{x:Null}" Margin="0,0,0,0.2">
+                    <StackPanel Height="255" Width="300">
+                        <Image Height="150" Source="/QLKS;component/Hinh/icons8-waiter-100.png"/>
+                        <Label Content="DỊCH VỤ" HorizontalAlignment="Center" FontSize="24" FontWeight="Bold" Height="104" Width="300" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                    </StackPanel>
+                </Button>
+                <Button x:Name="btnDangXuat" Width="294" Background="{x:Null}" BorderBrush="{x:Null}" Margin="0,0,0,0.2">
+                    <StackPanel Height="253" Width="293">
+                        <Image Height="150" Source="/QLKS;component/Hinh/icons8-exit-100.png"/>
+                        <Label Content="ĐĂNG XUẤT" HorizontalAlignment="Center" FontSize="24" FontWeight="Bold" Height="101" Margin="0,0,-0.2,0" Width="293" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                    </StackPanel>
+                </Button>
+            </DockPanel>
+        </StackPanel>
     </Grid>
 </Window>
