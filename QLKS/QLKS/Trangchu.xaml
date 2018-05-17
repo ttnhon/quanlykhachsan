@@ -18,19 +18,19 @@
             <Label x:Name="LabelName" Content="Label" HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="128" Canvas.Left="380" FontWeight="Bold"/>
         </Canvas>
         <Canvas HorizontalAlignment="Left" Height="139" Margin="0,38,0,0" VerticalAlignment="Top" Width="518" Grid.RowSpan="3">
-            <Button Canvas.Left="10" Canvas.Top="10" Width="133" Height="119" Background="{x:Null}" BorderBrush="{x:Null}">
+            <Button x:Name="btnThuePhong" Canvas.Left="10" Canvas.Top="10" Width="133" Height="119" Background="{x:Null}" BorderBrush="{x:Null}">
                 <StackPanel Height="109" Width="132">
-                    <Image Height="78" Source="Hinh/icons8-hotel-check-in-100.png"/>
-                    <Label Content="THUÊ PHÒNG" HorizontalAlignment="Center" FontSize="16" FontWeight="Bold"/>
+                    <Image Height="83" Source="Hinh/icons8-hotel-check-in-100.png"/>
+                    <Label Content="THUÊ PHÒNG" HorizontalAlignment="Center" FontSize="14" FontWeight="Bold"/>
                 </StackPanel>
             </Button>
-            <Button Canvas.Left="185" Canvas.Top="10" Width="133" Height="119" Background="{x:Null}" BorderBrush="{x:Null}">
+            <Button x:Name="btnQuanLyPhong" Canvas.Left="185" Canvas.Top="10" Width="133" Height="119" Background="{x:Null}" BorderBrush="{x:Null}">
                 <StackPanel Height="109" Width="132">
-                    <Image Height="85" Source="Hinh/icons8-hotel-bed-100.png"/>
+                    <Image Height="83" Source="Hinh/icons8-hotel-bed-100.png"/>
                     <Label Content="QUẢN LÝ PHÒNG" HorizontalAlignment="Center" FontSize="14" FontWeight="Bold" Margin="4,0,0,0" Height="33" Width="128"/>
                 </StackPanel>
             </Button>
-            <Button Canvas.Left="343" Canvas.Top="10" Width="166" Height="119" Background="{x:Null}" BorderBrush="{x:Null}">
+            <Button x:Name="btnLoaiPhong" Canvas.Left="343" Canvas.Top="10" Width="166" Height="119" Background="{x:Null}" BorderBrush="{x:Null}" Cursor="">
                 <StackPanel Height="109" Width="166">
                     <Image Height="83" Source="Hinh/icons8-bed-100.png" Margin="0,0,0.4,0"/>
                     <Label Content="QUẢN LÝ LOẠI PHÒNG" HorizontalAlignment="Center" FontSize="14" FontWeight="Bold"/>
@@ -38,19 +38,24 @@
             </Button>
         </Canvas>
         <Canvas HorizontalAlignment="Left" Height="144" Margin="0,0.2,0,-0.2" Grid.Row="2" VerticalAlignment="Top" Width="518" RenderTransformOrigin="0.53,0.504">
-            <Button Canvas.Left="10" Canvas.Top="10" Width="133" Height="119" Background="{x:Null}" BorderBrush="{x:Null}">
+            <Button x:Name="btnKhachHang" Canvas.Left="10" Canvas.Top="10" Width="133" Height="119" Background="{x:Null}" BorderBrush="{x:Null}">
                 <StackPanel Height="109" Width="132">
                     <Image Height="78" Source="Hinh/icons8-contacts-100.png"/>
                     <Label Content="KHÁCH HÀNG" HorizontalAlignment="Center" FontSize="16" FontWeight="Bold"/>
                 </StackPanel>
             </Button>
-            <Button Canvas.Left="182" Canvas.Top="10" Width="133" Height="119" Background="{x:Null}" BorderBrush="{x:Null}">
+            <Button x:Name="btnDichVu" Canvas.Left="182" Canvas.Top="10" Width="133" Height="119" Background="{x:Null}" BorderBrush="{x:Null}">
                 <StackPanel Height="109" Width="132">
                     <Image Height="78" Source="Hinh/icons8-waiter-100.png"/>
                     <Label Content="DỊCH VỤ" HorizontalAlignment="Center" FontSize="16" FontWeight="Bold"/>
                 </StackPanel>
             </Button>
-            <Button Canvas.Left="364" Canvas.Top="10" Width="133" Height="119" Background="{x:Null}" BorderBrush="{x:Null}"/>
+            <Button x:Name="btnDangXuat" Canvas.Left="364" Canvas.Top="10" Width="133" Height="119" Background="{x:Null}" BorderBrush="{x:Null}">
+                <StackPanel Height="109" Width="132">
+                    <Image Height="78" Source="/Hinh/icons8-exit-100.png"/>
+                    <Label Content="ĐĂNG XUẤT" HorizontalAlignment="Center" FontSize="16" FontWeight="Bold"/>
+                </StackPanel>
+            </Button>
         </Canvas>
     </Grid>
 </Window>
