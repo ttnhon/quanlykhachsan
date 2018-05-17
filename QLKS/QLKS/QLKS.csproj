@@ -79,6 +79,9 @@
     <Compile Include="Quanlyphong.xaml.cs">
       <DependentUpon>Quanlyphong.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ThuePhong.xaml.cs">
+      <DependentUpon>ThuePhong.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Trangchu.xaml.cs">
       <DependentUpon>Trangchu.xaml</DependentUpon>
     </Compile>
@@ -116,6 +119,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Quanlyphong.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ThuePhong.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
