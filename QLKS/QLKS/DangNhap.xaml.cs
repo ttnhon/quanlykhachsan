@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QLKS.Helper;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -28,27 +29,19 @@ namespace QLKS
         
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            string username = inputUsername.Text;
-            string get_password = inputPassword.Password.ToString();
-            string password = App.hashPassword(get_password);
-            SqlConnection cnn = new SqlConnection(App.sConnB.ConnectionString);
-
-            string sql = "select * from NguoiDung where TenDangNhap = '" + username + "' and MatKhau = '" + password + "'";
-            SqlDataAdapter da = new SqlDataAdapter(sql, cnn);
-            DataTable table = new DataTable();
-            da.Fill(table);
-            if (table.Rows.Count < 1)
+            string UserName = inputUsername.Text;
+            string Password = inputPassword.Password.ToString();
+            bool check = NguoiDungDAO.CheckTaiKhoan(UserName, Password);
+            if (!check)
             {
                 MessageBox.Show("Sai tài khoản hoặc mật khẩu!\nVui lòng nhập lại...");
             }
             else
             //MessageBox.Show("Đăng nhập thành công!");
             {
-                string fullname = table.Rows[0][1].ToString();
-                string useraccount = table.Rows[0][3].ToString();
+                string HoTen = NguoiDungDAO.GetHoTenByUser(UserName);
 
-                //MessageBox.Show("useraccount: " + useraccount + "\n fullname: " + fullname);
-                Trangchu tc = new Trangchu(fullname, useraccount);
+                Trangchu tc = new Trangchu(HoTen, UserName);
                 tc.Show();
                 this.Hide();
             }
