@@ -31,6 +31,8 @@ namespace QLKS
 
             //DichVu dv = DichVuDAO.LoadOne(3);
             //txtbox.Text = dv.DonGia.ToString();
+            ThuePhong thuephong = new ThuePhong();
+            thuephong.Show();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
