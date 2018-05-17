@@ -54,24 +54,24 @@ namespace QLKS
 
             return table.Rows[0].Field<int>(0);
         }
-        static public bool CheckTaiKhoan(string username, string password)
-        {
-            password = HashPassword.hash(password);
-            SqlConnection cnn = new SqlConnection(App.sConnB.ConnectionString);
+        //static public bool CheckTaiKhoan(string username, string password)
+        //{
+        //    password = HashPassword.hash(password);
+        //    SqlConnection cnn = new SqlConnection(App.sConnB.ConnectionString);
 
-            string sql = "select * from NguoiDung where TenDangNhap = '" + username + "' and MatKhau = '" + password + "'";
-            SqlDataAdapter da = new SqlDataAdapter(sql, cnn);
-            DataTable table = new DataTable();
-            da.Fill(table);
-            if (table.Rows.Count < 1)
-            {
-                return false;
-            }
-            else
+        //    string sql = "select * from NguoiDung where TenDangNhap = '" + username + "' and MatKhau = '" + password + "'";
+        //    SqlDataAdapter da = new SqlDataAdapter(sql, cnn);
+        //    DataTable table = new DataTable();
+        //    da.Fill(table);
+        //    if (table.Rows.Count < 1)
+        //    {
+        //        return false;
+        //    }
+        //    else
             
-            {
-                return true;
-            }
-        }
+        //    {
+        //        return true;
+        //    }
+        //}
     }
 }

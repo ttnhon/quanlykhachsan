@@ -31,8 +31,11 @@ namespace QLKS
         {
             string UserName = inputUsername.Text;
             string Password = inputPassword.Password.ToString();
-            bool check = NguoiDungDAO.CheckTaiKhoan(UserName, Password);
-            if (!check)
+            Password = HashPassword.hash(Password);
+            //bool check = NguoiDungDAO.CheckTaiKhoan(UserName, Password);
+            string GetPassword = NguoiDungDAO.GetMatKhauByUser(UserName);
+
+            if (!Password.Equals(GetPassword))
             {
                 MessageBox.Show("Sai tài khoản hoặc mật khẩu!\nVui lòng nhập lại...");
             }
