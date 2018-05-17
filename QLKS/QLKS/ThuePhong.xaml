@@ -5,10 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:QLKS"
         mc:Ignorable="d"
-        Title="ThuePhong" Height="300" Width="300">
-    
-    <Grid>
-        <StackPanel HorizontalAlignment="Left" Height="153" Margin="10,10,0,0" VerticalAlignment="Top" Width="272"/>
+        Title="ThuePhong" Height="300" Width="314.665">
 
+    <Grid>
+        <WrapPanel x:Name="wrapPanel" Margin="0,0,0,0" Height="269" VerticalAlignment="Top">
+            <Button x:Name="btn1">Test button 1</Button>
+            <Button>Test button 2</Button>
+            <Button>Test button 3</Button>
+            <Button>Test button 4</Button>
+            <Button>Test button 5</Button>
+            <Button>Test button 6</Button>
+        </WrapPanel>
     </Grid>
 </Window>
