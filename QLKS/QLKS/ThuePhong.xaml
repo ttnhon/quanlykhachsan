@@ -16,7 +16,8 @@
             <MenuItem x:Name="doiphong" Header="Đổi phòng" IsEnabled="False" />
             <MenuItem x:Name="khachrangoai" Header="Khách ra ngoài" IsEnabled="False" />
             <Separator/>
-            <MenuItem x:Name="datphong" Header="Đặt phòng" IsEnabled="True" />
+            <MenuItem x:Name="datphong" Header="Đặt phòng" IsEnabled="True" Click="MenuDatPhong_Click" />
+            <MenuItem x:Name="chitietdatphong" Header="Chi tiết đặt phòng" IsEnabled="True" />
             <Separator/>
             <MenuItem x:Name="donphong" Header="Dọn phòng" Click="MenuDonPhong_Click" />
             <MenuItem x:Name="suaphong" Header="Sửa phòng" Click="MenuSuaPhong_Click" />

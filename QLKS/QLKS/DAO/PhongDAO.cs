@@ -162,5 +162,6 @@ namespace QLKS.DAO
             string sql = "Update Phong set TrangThai = " + trangThai + " where MaPhong = " + maPhong;
             return xldulieu.Execute(sql);
         }
+        
     }
 }
