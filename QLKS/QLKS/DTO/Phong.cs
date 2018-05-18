@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace QLKS
+namespace QLKS.DTO
 {
-    class Phong
+    public class Phong
     {
         public int MaPhong;
         public string LoaiPhong;

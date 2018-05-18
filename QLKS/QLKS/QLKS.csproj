@@ -54,19 +54,21 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="DatPhong.cs" />
-    <Compile Include="DatPhongDAO.cs" />
-    <Compile Include="DichVu.cs" />
-    <Compile Include="DichVuDAO.cs" />
+    <Compile Include="DAO\TinhTrangDAO.cs" />
+    <Compile Include="DAO\TrangThaiDAO.cs" />
+    <Compile Include="DTO\DatPhong.cs" />
+    <Compile Include="DAO\DatPhongDAO.cs" />
+    <Compile Include="DTO\DichVu.cs" />
+    <Compile Include="DAO\DichVuDAO.cs" />
     <Compile Include="Helper\HashPassword.cs" />
-    <Compile Include="KhachHang.cs" />
-    <Compile Include="KhachHangDAO.cs" />
-    <Compile Include="LoaiKhach.cs" />
-    <Compile Include="LoaiKhachDAO.cs" />
-    <Compile Include="NguoiDung.cs" />
-    <Compile Include="NguoiDungDAO.cs" />
-    <Compile Include="Phong.cs" />
-    <Compile Include="PhongDAO.cs" />
+    <Compile Include="DTO\KhachHang.cs" />
+    <Compile Include="DAO\KhachHangDAO.cs" />
+    <Compile Include="DTO\LoaiKhach.cs" />
+    <Compile Include="DAO\LoaiKhachDAO.cs" />
+    <Compile Include="DTO\NguoiDung.cs" />
+    <Compile Include="DAO\NguoiDungDAO.cs" />
+    <Compile Include="DTO\Phong.cs" />
+    <Compile Include="DAO\PhongDAO.cs" />
     <Compile Include="Quanlydichvu.xaml.cs">
       <DependentUpon>Quanlydichvu.xaml</DependentUpon>
     </Compile>
@@ -100,8 +102,8 @@
     <Compile Include="DangNhap.xaml.cs">
       <DependentUpon>DangNhap.xaml</DependentUpon>
     </Compile>
-    <Compile Include="LoaiPhong.cs" />
-    <Compile Include="LoaiPhongDAO.cs" />
+    <Compile Include="DTO\LoaiPhong.cs" />
+    <Compile Include="DAO\LoaiPhongDAO.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -158,9 +160,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="login.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Hinh\login.png" />
   </ItemGroup>
   <ItemGroup>
@@ -192,6 +191,15 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Hinh\icons8-google-web-search-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Hinh\icons8-exit-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Hinh\icons8-update-filled-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="GUI\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
