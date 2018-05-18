@@ -5,16 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:QLKS"
         mc:Ignorable="d"
-        Title="ThuePhong" Height="300" Width="314.665">
+        Title="ThuePhong" Height="541.5" Width="766.002">
 
     <Grid>
-        <WrapPanel x:Name="wrapPanel" Margin="0,0,0,0" Height="269" VerticalAlignment="Top">
-            <Button x:Name="btn1">Test button 1</Button>
-            <Button>Test button 2</Button>
-            <Button>Test button 3</Button>
-            <Button>Test button 4</Button>
-            <Button>Test button 5</Button>
-            <Button>Test button 6</Button>
-        </WrapPanel>
+        <ScrollViewer x:Name="MyScrollViewer" VerticalScrollBarVisibility="Auto" Margin="10,10,10,115">
+            <WrapPanel x:Name="wrapPanel" Margin="0,0,0,0" Width="{Binding ElementName=MyScrollViewer, Path=ActualWidth}" VerticalAlignment="Top">
+
+            </WrapPanel>
+        </ScrollViewer>
     </Grid>
 </Window>

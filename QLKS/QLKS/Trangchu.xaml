@@ -18,7 +18,7 @@
         </WrapPanel>
         <StackPanel Margin="0,0.2,-0.4,0.4" Orientation="Vertical" Grid.Row="1" Grid.RowSpan="2">
             <DockPanel HorizontalAlignment="Left" Height="246" VerticalAlignment="Top" Width="894">
-                <Button x:Name="btnThuePhong" Width="303" Background="{x:Null}" BorderBrush="{x:Null}" Margin="0,0,0,0.4">
+                <Button x:Name="btnThuePhong" Width="303" Background="{x:Null}" BorderBrush="{x:Null}" Margin="0,0,0,0.4" Click="BtnThuePhong_Click">
                     <StackPanel Height="244" Width="303">
                         <Image Height="150" Source="/QLKS;component/Hinh/icons8-hotel-check-in-100.png" Margin="0,0,0.2,0"/>
                         <Label Content="THUÊ PHÒNG" HorizontalAlignment="Center" FontSize="24" FontWeight="Bold" Height="92" Margin="0,0,0.2,0" Width="303" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>

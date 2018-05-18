@@ -56,6 +56,7 @@
     </ApplicationDefinition>
     <Compile Include="DAO\TinhTrangDAO.cs" />
     <Compile Include="DAO\TrangThaiDAO.cs" />
+    <Compile Include="DAO\XL_DULIEU.cs" />
     <Compile Include="DTO\DatPhong.cs" />
     <Compile Include="DAO\DatPhongDAO.cs" />
     <Compile Include="DTO\DichVu.cs" />

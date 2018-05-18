@@ -101,5 +101,26 @@ namespace QLKS.DAO
             cnn.Close();
             return affectCount;
         }
+        static XL_DULIEU xldulieu = new XL_DULIEU();
+        static public int GetSoLuongPhong()
+        {
+            string sql = "select count(*) from Phong";
+            DataTable table = xldulieu.LoadData(sql);
+            return table.Rows[0].Field<int>(0);
+        }
+        static public int GetSoLuongPhongSuDung()
+        {
+            string sql = "select count(*) from Phong where TinhTrang != 3";
+            DataTable table = xldulieu.LoadData(sql);
+            return table.Rows[0].Field<int>(0);
+        }
+        static public DataTable LoadPhongSuDung()
+        {
+            string sql = "select p.MaPhong,lp.TenLoai,tt.TinhTrang,tth.TrangThai " +
+                "from Phong p join LoaiPhong lp on p.LoaiPhong = lp.MaLoai " +
+                "join TinhTrangPhong tt on p.TinhTrang = tt.MaTT " +
+                "join TrangThaiPhong tth on p.TrangThai = tth.MaTT where p.TinhTrang != 3";
+            return xldulieu.LoadData(sql);
+        }
     }
 }

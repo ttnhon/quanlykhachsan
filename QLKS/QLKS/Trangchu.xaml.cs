@@ -25,7 +25,14 @@ namespace QLKS
         {
             Quanlyphong qlphong = new Quanlyphong(account);
             qlphong.Show();
-            this.Hide();
+            this.Close();
+        }
+
+        private void BtnThuePhong_Click(object sender, RoutedEventArgs e)
+        {
+            ThuePhong thuePhong = new ThuePhong();
+            thuePhong.Show();
+            this.Close();
         }
 
         public Trangchu(string name, string account)

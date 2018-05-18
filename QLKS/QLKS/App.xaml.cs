@@ -18,11 +18,11 @@ namespace QLKS
     {
         static public SqlConnectionStringBuilder sConnB = new SqlConnectionStringBuilder()
         {
-            DataSource = "desktop-viil54u\\huynhphiphuc",
+            DataSource = "REFICUL",
             InitialCatalog = "quanlykhachsan",
-            IntegratedSecurity = true,
-            //UserID = "sa",
-            //Password = "sa"
+            //IntegratedSecurity = true,
+            UserID = "sa",
+            Password = "sa"
         };
     }
 }

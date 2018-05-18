@@ -8,16 +8,13 @@ using System.Data.SqlClient;
 
 namespace QLKS.DAO
 {
-    class DatPhongDAO
+    public class DatPhongDAO
     {
-        static public DataTable LoadAll()
+        XL_DULIEU xldulieu = new XL_DULIEU();
+        public DataTable LoadAll()
         {
-            SqlConnection cnn = new SqlConnection(App.sConnB.ConnectionString);
             string sql = "select * from DatPhong";
-            SqlDataAdapter da = new SqlDataAdapter(sql, cnn);
-            DataTable table = new DataTable();
-            da.Fill(table);
-            return table;
+            return xldulieu.LoadData(sql);
         }
     }
 }
