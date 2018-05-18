@@ -34,6 +34,10 @@ namespace QLKS
             thuePhong.Show();
             this.Close();
         }
+        public Trangchu()
+        {
+            InitializeComponent();
+        }
 
         public Trangchu(string name, string account)
         {
