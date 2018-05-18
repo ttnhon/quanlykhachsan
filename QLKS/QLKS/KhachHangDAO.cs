@@ -19,7 +19,7 @@ namespace QLKS
             da.Fill(table);
             return table;
         }
-
+        
         static public KhachHang LoadOne(int maKhach)
         {
             SqlConnection cnn = new SqlConnection(App.sConnB.ConnectionString);

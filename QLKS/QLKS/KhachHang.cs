@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace QLKS
 {
-    class KhachHang
+    public class KhachHang
     {
         public int MaKhach;
         public string TenKhach;
