@@ -1,4 +1,5 @@
 ﻿using QLKS.DAO;
+using QLKS.DTO;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -78,6 +79,7 @@ namespace QLKS
             MenuItem doiphong = LogicalTreeHelper.FindLogicalNode(cm, "doiphong") as MenuItem;
             MenuItem khachrangoai = LogicalTreeHelper.FindLogicalNode(cm, "khachrangoai") as MenuItem;
             MenuItem datphong = LogicalTreeHelper.FindLogicalNode(cm, "datphong") as MenuItem;
+            MenuItem chitietdatphong = LogicalTreeHelper.FindLogicalNode(cm, "chitietdatphong") as MenuItem;
             MenuItem donphong = LogicalTreeHelper.FindLogicalNode(cm, "donphong") as MenuItem;
             MenuItem suaphong = LogicalTreeHelper.FindLogicalNode(cm, "suaphong") as MenuItem;
 
@@ -94,6 +96,8 @@ namespace QLKS
                 doiphong.IsEnabled = false;
                 khachrangoai.IsEnabled = false;
                 datphong.IsEnabled = false;
+                datphong.Header = "Đặt phòng";
+                chitietdatphong.IsEnabled = false;
                 if(trangThai==3)
                 {
                     suaphong.IsEnabled = false;
@@ -118,6 +122,24 @@ namespace QLKS
                 doiphong.IsEnabled = false;
                 khachrangoai.IsEnabled = false;
                 datphong.IsEnabled = true;
+                chitietdatphong.IsEnabled = false;
+                donphong.IsEnabled = true;
+                suaphong.IsEnabled = true;
+                datphong.Header = "Đặt phòng";
+                donphong.Header = "Dọn phòng";
+                suaphong.Header = "Sửa phòng";
+                return;
+            }
+            if(tinhTrang==4)
+            {
+                thuephong.IsEnabled = true;
+                thongtinkhach.IsEnabled = false;
+                capnhatdichvu.IsEnabled = false;
+                doiphong.IsEnabled = false;
+                khachrangoai.IsEnabled = false;
+                datphong.IsEnabled = true;
+                datphong.Header = "Hủy đặt phòng";
+                chitietdatphong.IsEnabled = true;
                 donphong.IsEnabled = true;
                 suaphong.IsEnabled = true;
                 donphong.Header = "Dọn phòng";
@@ -139,7 +161,7 @@ namespace QLKS
             if (trangThai.Equals("Đang sửa chữa"))
                 return Colors.DarkBlue;
             if (tinhTrang.Equals("Đặt trước"))
-                return Colors.Yellow;
+                return Colors.Brown;
             if (tinhTrang.Equals("Đang thuê") && trangThai.Equals("Khách trong phòng"))
                 return Colors.Red;
             if (trangThai.Equals("Khách ra ngoài"))
@@ -195,6 +217,33 @@ namespace QLKS
             else
             {
                 PhongDAO.SetTrangThaiPhong(maPhong, 4);
+            }
+            wrapPanel.Children.Clear();
+            LoadPhong();
+        }
+
+        private void MenuDatPhong_Click(object sender, RoutedEventArgs e)
+        {
+            MenuItem mnu = sender as MenuItem;
+            ContextMenu menu = (ContextMenu)mnu.Parent;
+            Button button = menu.PlacementTarget as Button;
+            int maPhong = Int32.Parse(button.Name.Substring(1));
+            int tinhtrang = PhongDAO.GetTinhTrangPhong(maPhong);
+            int trangthai = PhongDAO.GetTrangThaiPhong(maPhong);
+            if(tinhtrang == 4)
+            {
+                DatPhong dp = DatPhongDAO.LoadOne(maPhong);
+                if (dp != null)
+                {
+                    DatPhongDAO.Delete(dp);
+                    PhongDAO.SetTinhTrangPhong(maPhong, 1);
+                }
+                else
+                    MessageBox.Show("Có Lỗi xảy ra\nXin mời thử lại", "Thông báo");
+            }
+            else
+            {
+
             }
             wrapPanel.Children.Clear();
             LoadPhong();

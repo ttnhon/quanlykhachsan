@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace QLKS.DTO
 {
-    class DatPhong
+    public class DatPhong
     {
         public int MaPhong;
         public int MaKhach;
