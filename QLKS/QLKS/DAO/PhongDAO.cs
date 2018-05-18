@@ -122,5 +122,31 @@ namespace QLKS.DAO
                 "join TrangThaiPhong tth on p.TrangThai = tth.MaTT where p.TinhTrang != 3";
             return xldulieu.LoadData(sql);
         }
+        static public int GetTinhTrangPhong(int maPhong)
+        {
+            string sql = "select TinhTrang from Phong where MaPhong = " + maPhong;
+            DataTable table = xldulieu.LoadData(sql);
+            if (table.Rows.Count < 1)
+                return 0;
+            return table.Rows[0].Field<int>(0);
+        }
+        static public int GetTrangThaiPhong(int maPhong)
+        {
+            string sql = "select TrangThai from Phong where MaPhong = " + maPhong;
+            DataTable table = xldulieu.LoadData(sql);
+            if (table.Rows.Count < 1)
+                return 0;
+            return table.Rows[0].Field<int>(0);
+        }
+        static public int SetTinhTrangPhong(int maPhong, int tinhTrang)
+        {
+            string sql = "Update Phong set TinhTrang = " + tinhTrang + " where MaPhong = " + maPhong;
+            return xldulieu.Execute(sql);
+        }
+        static public int SetTrangThaiPhong(int maPhong, int trangThai)
+        {
+            string sql = "Update Phong set TrangThai = " + trangThai + " where MaPhong = " + maPhong;
+            return xldulieu.Execute(sql);
+        }
     }
 }
