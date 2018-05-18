@@ -8,7 +8,7 @@ using System.Data.SqlClient;
 using QLKS.Helper;
 using System.Windows;
 
-namespace QLKS
+namespace QLKS.DAO
 {
     public class NguoiDungDAO
     {

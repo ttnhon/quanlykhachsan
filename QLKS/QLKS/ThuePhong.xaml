@@ -5,16 +5,29 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:QLKS"
         mc:Ignorable="d"
-        Title="ThuePhong" Height="300" Width="314.665">
-
+        Title="ThuePhong" Height="541.5" Width="766.002">
+    <Window.Resources>
+        <ContextMenu x:Key="cmButton">
+            <MenuItem x:Name="thuephong" Header="Khách thuê phòng" />
+            <Separator />
+            <MenuItem x:Name="thongtinkhach" Header="Thông tin khách" IsEnabled="False" />
+            <MenuItem x:Name="capnhatdichvu" Header="Cập nhật dịch vụ" IsEnabled="False"/>
+            <Separator />
+            <MenuItem x:Name="doiphong" Header="Đổi phòng" IsEnabled="False" />
+            <MenuItem x:Name="khachrangoai" Header="Khách ra ngoài" IsEnabled="False" />
+            <Separator/>
+            <MenuItem x:Name="datphong" Header="Đặt phòng" IsEnabled="True" Click="MenuDatPhong_Click" />
+            <MenuItem x:Name="chitietdatphong" Header="Chi tiết đặt phòng" IsEnabled="True" />
+            <Separator/>
+            <MenuItem x:Name="donphong" Header="Dọn phòng" Click="MenuDonPhong_Click" />
+            <MenuItem x:Name="suaphong" Header="Sửa phòng" Click="MenuSuaPhong_Click" />
+        </ContextMenu>
+    </Window.Resources>
     <Grid>
-        <WrapPanel x:Name="wrapPanel" Margin="0,0,0,0" Height="269" VerticalAlignment="Top">
-            <Button x:Name="btn1">Test button 1</Button>
-            <Button>Test button 2</Button>
-            <Button>Test button 3</Button>
-            <Button>Test button 4</Button>
-            <Button>Test button 5</Button>
-            <Button>Test button 6</Button>
-        </WrapPanel>
+        <ScrollViewer x:Name="MyScrollViewer" VerticalScrollBarVisibility="Auto" Margin="10,10,10,115">
+            <WrapPanel x:Name="wrapPanel" Margin="0,0,0,0" Width="{Binding ElementName=MyScrollViewer, Path=ActualWidth}" VerticalAlignment="Top" HorizontalAlignment="Center">
+
+            </WrapPanel>
+        </ScrollViewer>
     </Grid>
 </Window>

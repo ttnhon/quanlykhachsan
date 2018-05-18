@@ -20,6 +20,25 @@ namespace QLKS
     public partial class Trangchu : Window
     {
         string name, account;
+
+        private void btnQuanLyPhong_Click(object sender, RoutedEventArgs e)
+        {
+            Quanlyphong qlphong = new Quanlyphong(account);
+            qlphong.Show();
+            this.Close();
+        }
+
+        private void BtnThuePhong_Click(object sender, RoutedEventArgs e)
+        {
+            ThuePhong thuePhong = new ThuePhong();
+            thuePhong.Show();
+            this.Close();
+        }
+        public Trangchu()
+        {
+            InitializeComponent();
+        }
+
         public Trangchu(string name, string account)
         {
             InitializeComponent();

@@ -5,8 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
+using QLKS.DTO;
 
-namespace QLKS
+namespace QLKS.DAO
 {
     class DichVuDAO
     {
