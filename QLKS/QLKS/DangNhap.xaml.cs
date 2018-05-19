@@ -34,7 +34,7 @@ namespace QLKS
         {
             string UserName = inputUsername.Text;
             string Password = inputPassword.Password.ToString();
-            Password = HashPassword.hash(Password);
+            //Password = HashPassword.hash(Password);
             //bool check = NguoiDungDAO.CheckTaiKhoan(UserName, Password);
             string GetPassword = NguoiDungDAO.GetMatKhauByUser(UserName);
 

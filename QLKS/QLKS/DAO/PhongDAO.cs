@@ -41,6 +41,36 @@ namespace QLKS.DAO
             return p;
         }
 
+        static public DataTable SearchBy(int maPhong)
+        {
+            SqlConnection cnn = new SqlConnection(App.sConnB.ConnectionString);
+            string sql = "select p.MaPhong,lp.TenLoai,tt.TinhTrang,tth.TrangThai " +
+                "from Phong p join LoaiPhong lp on p.LoaiPhong = lp.MaLoai " +
+                "join TinhTrangPhong tt on p.TinhTrang = tt.MaTT " +
+                "join TrangThaiPhong tth on p.TrangThai = tth.MaTT " + 
+                "where MaPhong = " + maPhong;
+            SqlDataAdapter da = new SqlDataAdapter(sql, cnn);
+            DataTable table = new DataTable();
+            da.Fill(table);
+            return table;
+        }
+
+        static public DataTable SearchBy(string text)
+        {
+            SqlConnection cnn = new SqlConnection(App.sConnB.ConnectionString);
+            string sql = "select p.MaPhong,lp.TenLoai,tt.TinhTrang,tth.TrangThai " +
+                "from Phong p join LoaiPhong lp on p.LoaiPhong = lp.MaLoai " +
+                "join TinhTrangPhong tt on p.TinhTrang = tt.MaTT " +
+                "join TrangThaiPhong tth on p.TrangThai = tth.MaTT " +
+                "where lp.TenLoai like N'" + text + "%' " +
+                "or tt.TinhTrang like N'" + text + "%' " +
+                "or tth.TrangThai like N'" + text + "%'";
+            SqlDataAdapter da = new SqlDataAdapter(sql, cnn);
+            DataTable table = new DataTable();
+            da.Fill(table);
+            return table;
+        }
+
         static public int Insert(Phong p)
         {
             if (LoadOne(p.MaPhong) != null)

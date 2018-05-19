@@ -26,3 +26,10 @@ E:\Backup\Lap Trinh\PT&TK Phần Mềm\quanlykhachsan\QLKS\QLKS\obj\Debug\Quanly
 E:\Backup\Lap Trinh\PT&TK Phần Mềm\quanlykhachsan\QLKS\QLKS\obj\Debug\Quanlykhachhang.baml
 E:\Backup\Lap Trinh\PT&TK Phần Mềm\quanlykhachsan\QLKS\QLKS\obj\Debug\Quanlyloaiphong.baml
 E:\Backup\Lap Trinh\PT&TK Phần Mềm\quanlykhachsan\QLKS\QLKS\obj\Debug\ThuePhong.baml
+E:\Backup\Lap Trinh\PT&TK Phần Mềm\quanlykhachsan\QLKS\QLKS\obj\Debug\ChiTietDatPhong.g.cs
+E:\Backup\Lap Trinh\PT&TK Phần Mềm\quanlykhachsan\QLKS\QLKS\obj\Debug\KhachThuePhong.g.cs
+E:\Backup\Lap Trinh\PT&TK Phần Mềm\quanlykhachsan\QLKS\QLKS\obj\Debug\ManHinhDatPhong.g.cs
+E:\Backup\Lap Trinh\PT&TK Phần Mềm\quanlykhachsan\QLKS\QLKS\obj\Debug\QLKS.csprojResolveAssemblyReference.cache
+E:\Backup\Lap Trinh\PT&TK Phần Mềm\quanlykhachsan\QLKS\QLKS\obj\Debug\ChiTietDatPhong.baml
+E:\Backup\Lap Trinh\PT&TK Phần Mềm\quanlykhachsan\QLKS\QLKS\obj\Debug\KhachThuePhong.baml
+E:\Backup\Lap Trinh\PT&TK Phần Mềm\quanlykhachsan\QLKS\QLKS\obj\Debug\ManHinhDatPhong.baml

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:QLKS"
         mc:Ignorable="d"
-        Title="KhachThuePhong" SizeToContent="Height" Height="Auto" Width="738">
+        Title="KhachThuePhong" SizeToContent="Height" Height="Auto" Width="738" WindowStartupLocation="CenterScreen">
     <Grid>
         <Label Content="Mã phòng" HorizontalAlignment="Left" Height="31" Margin="10,10,0,0" VerticalAlignment="Top" Width="73"/>
         <TextBox x:Name="txtMaPhong" HorizontalAlignment="Left" Height="31" Margin="88,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="110" IsReadOnly="True"/>

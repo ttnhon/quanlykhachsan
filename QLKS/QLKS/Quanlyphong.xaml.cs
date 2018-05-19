@@ -180,7 +180,10 @@ namespace QLKS
         private void btn_Capnhat_Click(object sender, RoutedEventArgs e)
         {
             if (txt_maphong.Text == "")
+            {
+                MessageBox.Show("Vui lòng chọn phòng để cập nhật.", "Thông báo");
                 return;
+            }
             EnableText();
             btn_Capnhat.IsEnabled = false;
             btn_CapnhatConfirm.Visibility = Visibility.Visible;
@@ -247,6 +250,28 @@ namespace QLKS
             EmptyText();
             UnenableText();
             btn_Huy.Visibility = Visibility.Hidden;
+        }
+
+        private void btn_search_Click(object sender, RoutedEventArgs e)
+        {
+            string search = txt_search.Text;
+            int n;
+            bool isnum = int.TryParse(search, out n);
+            if(search == "")
+            {
+                grid_phong.ItemsSource = PhongDAO.LoadAll().DefaultView;
+                return;
+            }
+            if(isnum)
+            {
+                grid_phong.ItemsSource = PhongDAO.SearchBy(n).DefaultView;
+                grid_phong.SelectedIndex = 0;
+            }
+            else
+            {
+                grid_phong.ItemsSource = PhongDAO.SearchBy(search).DefaultView;
+                grid_phong.SelectedIndex = 0;
+            }
         }
     }
 }
