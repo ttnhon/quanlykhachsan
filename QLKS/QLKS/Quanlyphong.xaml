@@ -19,13 +19,13 @@
                     <Label Content="Thêm mới" Height="39" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,-1,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="141" FontWeight="Bold"/>
                 </StackPanel>
             </Button>
-            <Button Background="{x:Null}" BorderBrush="{x:Null}" Margin="0,0,0,0.2" Width="110">
+            <Button x:Name="btn_Capnhat" Background="{x:Null}" BorderBrush="{x:Null}" Margin="0,0,0,0.2" Width="110" Click="btn_Capnhat_Click">
                 <StackPanel Height="100" Width="110">
                     <Image Height="64" Source="/QLKS;component/Hinh/icons8-update-filled-100.png"/>
                     <Label Content="Cập nhật" Height="39" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,-1,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="141" FontWeight="Bold"/>
                 </StackPanel>
             </Button>
-            <Button Background="{x:Null}" BorderBrush="{x:Null}" Margin="0,0,0,0.2" Width="110">
+            <Button x:Name="btn_Xoa" Background="{x:Null}" BorderBrush="{x:Null}" Margin="0,0,0,0.2" Width="110" Click="btn_Xoa_Click">
                 <StackPanel Height="100" Width="110">
                     <Image Height="64" Source="/QLKS;component/Hinh/icons8-close-window-100.png"/>
                     <Label Content="Xóa" Height="38" FontSize="16" HorizontalAlignment="Center" Width="140" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontWeight="Bold"/>
@@ -46,15 +46,15 @@
             </WrapPanel>
             <WrapPanel Height="60" Orientation="Horizontal">
                 <Label Content="Loại phòng:" FontSize="20" Height="46" Width="130"/>
-                <ComboBox x:Name="cb_loaiphong" Width="280" FontSize="20" ItemsSource="{Binding}" DisplayMemberPath="TenLoai" SelectedItem="{Binding Path=MaLoai}" VerticalContentAlignment="Center" IsEnabled="False"/>
+                <ComboBox x:Name="cb_loaiphong" Width="280" FontSize="20" ItemsSource="{Binding}" DisplayMemberPath="TenLoai" SelectedItem ="{Binding MaLoai}" SelectedValue="{Binding Path=MaLoai}" VerticalContentAlignment="Center" IsEnabled="False"/>
             </WrapPanel>
             <WrapPanel Height="60" Orientation="Horizontal">
                 <Label Content="Tình trạng:" FontSize="20" Height="46" Width="130"/>
-                <ComboBox x:Name="cb_tinhtrang" Width="280" FontSize="20" ItemsSource="{Binding}" DisplayMemberPath="TinhTrang" SelectedItem="{Binding Path=MaTT}" VerticalContentAlignment="Center" IsEnabled="False"/>
+                <ComboBox x:Name="cb_tinhtrang" Width="280" FontSize="20" ItemsSource="{Binding}" DisplayMemberPath="TinhTrang" SelectedItem ="{Binding MaTT}" VerticalContentAlignment="Center" IsEnabled="False"/>
             </WrapPanel>
             <WrapPanel Height="60" Orientation="Horizontal">
                 <Label Content="Trạng Thái:" FontSize="20" Height="46" Width="130"/>
-                <ComboBox x:Name="cb_trangthai" Width="280" FontSize="20" ItemsSource="{Binding}" DisplayMemberPath="TrangThai" SelectedItem="{Binding Path=MaTT}" VerticalContentAlignment="Center" IsEnabled="False"/>
+                <ComboBox x:Name="cb_trangthai" Width="280" FontSize="20" ItemsSource="{Binding}" DisplayMemberPath="TrangThai" SelectedItem="{Binding MaTT}" VerticalContentAlignment="Center" IsEnabled="False"/>
             </WrapPanel>
             <WrapPanel Height="159" Orientation="Horizontal" >
                 <Label Content="Ghi chú:" FontSize="20" Width="130" Height="48" VerticalAlignment="Center" HorizontalAlignment="Center"/>
@@ -62,12 +62,15 @@
             </WrapPanel>
             <WrapPanel Height="66" VerticalAlignment="Center" Width="416" HorizontalAlignment="Center">
                 <Button Content="Danh sách dịch vụ" Height="60" Width="200" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" Margin="5,0" Padding="1"/>
-                <Button Content="Sửa" IsHitTestVisible="True" Height="60" Width="90" VerticalAlignment="Center" VerticalContentAlignment="Center" FontSize="20" FontWeight="Bold" Margin="5,0" Visibility="Hidden"/>
-                <Button x:Name="btn_ThemConfirm" Content="Thêm" IsHitTestVisible="True" Height="60" Width="90" FontSize="20" FontWeight="Bold" Margin="5,0" Visibility="Hidden"/>
+                <Button x:Name="btn_Huy" Content="Hủy" IsHitTestVisible="True" Height="60" Width="90" FontSize="20" FontWeight="Bold" Margin="5,0,10,0" Visibility="Hidden" Click="btn_Huy_Click"/>
+                <Canvas Height="60" Width="92">
+                    <Button x:Name="btn_CapnhatConfirm" Content="Cập nhật" IsHitTestVisible="True" Height="60" Width="90" VerticalAlignment="Center" VerticalContentAlignment="Center" FontSize="20" FontWeight="Bold" Click="btn_CapnhatConfirm_Click" Canvas.Left="2" Visibility="Hidden"/>
+                    <Button x:Name="btn_ThemConfirm" Content="Thêm" IsHitTestVisible="True" Height="60" Width="90" FontSize="20" FontWeight="Bold" Click="btn_ThemConfirm_Click" Visibility="Hidden"/>
+                </Canvas>
             </WrapPanel>
         </StackPanel>
         <Canvas HorizontalAlignment="Left" Height="470" Margin="416,100,-0.4,0" VerticalAlignment="Top" Width="478">
-            <DataGrid x:Name="grid_phong" Height="450" Width="458" Canvas.Left="10" Canvas.Top="10" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" ItemsSource="{Binding Phong}" AutoGenerateColumns="False">
+            <DataGrid x:Name="grid_phong" Height="450" Width="458" Canvas.Left="10" Canvas.Top="10" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" ItemsSource="{Binding XPath=Phong}" AutoGenerateColumns="False" DataContext="MyViewModel" SelectionChanged="grid_phong_SelectionChanged">
                 <DataGrid.Columns>
                     <DataGridTextColumn Binding="{Binding MaPhong}" ClipboardContentBinding="{x:Null}" Header="Mã Phòng" Width="*"/>
                     <DataGridTextColumn Binding="{Binding TenLoai}" ClipboardContentBinding="{x:Null}" Header="Loại Phòng" Width="*"/>

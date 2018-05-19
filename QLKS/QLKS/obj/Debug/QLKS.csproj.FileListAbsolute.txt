@@ -1,7 +1,6 @@
 E:\Backup\Lap Trinh\PT&TK Phần Mềm\quanlykhachsan\QLKS\QLKS\bin\Debug\QLKS.exe.config
 E:\Backup\Lap Trinh\PT&TK Phần Mềm\quanlykhachsan\QLKS\QLKS\bin\Debug\QLKS.exe
 E:\Backup\Lap Trinh\PT&TK Phần Mềm\quanlykhachsan\QLKS\QLKS\bin\Debug\QLKS.pdb
-E:\Backup\Lap Trinh\PT&TK Phần Mềm\quanlykhachsan\QLKS\QLKS\obj\Debug\QLKS.csprojResolveAssemblyReference.cache
 E:\Backup\Lap Trinh\PT&TK Phần Mềm\quanlykhachsan\QLKS\QLKS\obj\Debug\QLKS_MarkupCompile.cache
 E:\Backup\Lap Trinh\PT&TK Phần Mềm\quanlykhachsan\QLKS\QLKS\obj\Debug\QLKS_MarkupCompile.lref
 E:\Backup\Lap Trinh\PT&TK Phần Mềm\quanlykhachsan\QLKS\QLKS\obj\Debug\QLKS.g.resources

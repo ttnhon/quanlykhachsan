@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace QLKS.DTO
 {
-    class KhachHang
+    public class KhachHang
     {
         public int MaKhach;
         public string TenKhach;

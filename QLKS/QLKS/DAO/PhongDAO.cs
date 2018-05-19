@@ -47,7 +47,7 @@ namespace QLKS.DAO
                 return 0;
             SqlConnection cnn = new SqlConnection(App.sConnB.ConnectionString);
             string sql = string.Format("Insert into Phong(MaPhong, LoaiPhong, TinhTrang, TrangThai, GhiChu) " +
-                "Values({0}, '{1}', {2}, {3}, '{4}')", p.MaPhong, p.LoaiPhong, p.TinhTrang, p.TrangThai
+                "Values({0}, '{1}', {2}, {3}, N'{4}')", p.MaPhong, p.LoaiPhong, p.TinhTrang, p.TrangThai
                 , p.GhiChu);
             SqlCommand comm = new SqlCommand(sql, cnn);
 
@@ -65,6 +65,20 @@ namespace QLKS.DAO
             string sql = string.Format("Update Phong Set LoaiPhong = '{0}', TinhTrang = {1}, " +
                 "TrangThai = {2}, GhiChu = '{3}' Where MaPhong = {4}", p.LoaiPhong, p.TinhTrang, p.TrangThai,
                 p.GhiChu, p.MaPhong);
+            SqlCommand comm = new SqlCommand(sql, cnn);
+
+            cnn.Open();
+            int affectCount = comm.ExecuteNonQuery();
+            cnn.Close();
+            return affectCount;
+        }
+
+        static public int Delete(Phong p)
+        {
+            if (LoadOne(p.MaPhong) == null)
+                return 0;
+            SqlConnection cnn = new SqlConnection(App.sConnB.ConnectionString);
+            string sql = string.Format("Delete from Phong where MaPhong = '{0}'", p.MaPhong);
             SqlCommand comm = new SqlCommand(sql, cnn);
 
             cnn.Open();
