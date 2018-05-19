@@ -73,7 +73,7 @@ namespace QLKS
 
         private void btn_home_Click(object sender, RoutedEventArgs e)
         {
-            Trangchu tc = new Trangchu(NguoiDungDAO.GetHoTenByUser(account), account);
+            Trangchu tc = new Trangchu(account);
             tc.Show();
             this.Close();
         }
