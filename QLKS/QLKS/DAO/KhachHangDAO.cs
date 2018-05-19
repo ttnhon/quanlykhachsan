@@ -44,7 +44,7 @@ namespace QLKS.DAO
                 return 0;
             SqlConnection cnn = new SqlConnection(App.sConnB.ConnectionString);
             string sql = string.Format("Insert into KhachHang(TenKhach, SoCMND, DiaChi, DienThoai, LoaiKhach) " +
-                "Values('{0}', '{1}', '{2}', '{3}', {4})", kh.TenKhach, kh.SoCMND, kh.DiaChi, kh.DienThoai,
+                "Values(N'{0}', '{1}', N'{2}', '{3}', {4})", kh.TenKhach, kh.SoCMND, kh.DiaChi, kh.DienThoai,
                 kh.LoaiKhach);
             SqlCommand comm = new SqlCommand(sql, cnn);
 
@@ -59,8 +59,8 @@ namespace QLKS.DAO
             if (LoadOne(kh.MaKhach) == null)
                 return 0;
             SqlConnection cnn = new SqlConnection(App.sConnB.ConnectionString);
-            string sql = string.Format("Update KhachHang Set TenKhach = '{0}', SoCMND = '{1}', " +
-                "DiaChi = '{2}', DienThoai = '{3}', LoaiKhach = {4}" +
+            string sql = string.Format("Update KhachHang Set TenKhach = N'{0}', SoCMND = '{1}', " +
+                "DiaChi = N'{2}', DienThoai = '{3}', LoaiKhach = {4}" +
                 " Where MaKhach = {5}", kh.TenKhach, kh.SoCMND, kh.DiaChi, kh.DienThoai, kh.LoaiKhach,
                 kh.MaKhach);
             SqlCommand comm = new SqlCommand(sql, cnn);

@@ -44,7 +44,7 @@ namespace QLKS.DAO
                 return 0;
             SqlConnection cnn = new SqlConnection(App.sConnB.ConnectionString);
             string sql = string.Format("Insert into DichVu(TenDV, DonGia, GhiChu, ConSuDung) " +
-                "Values('{0}', {1}, '{2}', {3})", dv.TenDV, dv.DonGia, dv.GhiChu,
+                "Values(N'{0}', {1}, N'{2}', {3})", dv.TenDV, dv.DonGia, dv.GhiChu,
                 dv.ConSuDung);
             SqlCommand comm = new SqlCommand(sql, cnn);
 
@@ -59,8 +59,8 @@ namespace QLKS.DAO
             if (LoadOne(dv.MaDV) == null)
                 return 0;
             SqlConnection cnn = new SqlConnection(App.sConnB.ConnectionString);
-            string sql = string.Format("Update DichVu Set TenDV = '{0}', DonGia = {1}, " +
-                "GhiChu = '{2}', ConSuDung = {3} Where MaDV = {4}", dv.TenDV, dv.DonGia, dv.GhiChu,
+            string sql = string.Format("Update DichVu Set TenDV = N'{0}', DonGia = {1}, " +
+                "GhiChu = N'{2}', ConSuDung = {3} Where MaDV = {4}", dv.TenDV, dv.DonGia, dv.GhiChu,
                 dv.ConSuDung, dv.MaDV);
             SqlCommand comm = new SqlCommand(sql, cnn);
 
