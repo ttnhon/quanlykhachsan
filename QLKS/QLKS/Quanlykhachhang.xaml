@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:QLKS"
         mc:Ignorable="d"
-        Title="Quản lý khách hàng" Height="378.659" Width="591.519">
+        Title="Quản lý khách hàng" Height="378.659" Width="591.519" WindowStartupLocation="CenterScreen">
     <Grid>
         <Canvas HorizontalAlignment="Left" Height="66" VerticalAlignment="Top" Width="577">
             <Button x:Name="btnTrangChu" Width="70" Height="60" Background="{x:Null}" BorderBrush="{x:Null}" Cursor="Hand" Click="Button_TrangChu">

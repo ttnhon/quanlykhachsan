@@ -17,11 +17,39 @@ namespace QLKS.DAO
             string sql = "select * from DatPhong";
             return xldulieu.LoadData(sql);
         }
-
-        static public int Delete(DatPhong dp)
+        static public bool IsExist(DatPhong dp)
         {
-            string sql = "delete from DatPhong where MaPhong = " + dp.MaPhong + " and MaKhach = " + dp.MaKhach +
-                " and NgayThue = '" + dp.NgayThue.ToString("MM-dd-yyyy HH:mm:ss.fff")+"'";
+            string sql = "select * from DatPhong where MaPhong = " + dp.MaPhong + " and MaKhach = " + dp.MaKhach +
+                " and NgayThue = '" + dp.NgayThue.ToString("MM-dd-yyyy HH:mm:ss.fff") + "'";
+            DataTable table = xldulieu.LoadData(sql);
+            if (table.Rows.Count < 1)
+                return false;
+            return true;
+        }
+        static public DataTable LoadByMaPhong(int maPhong)
+        {
+            string sql = "select * from DatPhong where MaPhong = " + maPhong;
+            return xldulieu.LoadData(sql);
+        }
+        static public DataTable LoadThongTinKhach(int maPhong)
+        {
+            string sql = "select kh.MaKhach, kh.TenKhach, kh.DiaChi " +
+                "from DatPhong dp join KhachHang kh on dp.MaKhach = kh.MaKhach" +
+                " where MaPhong = " + maPhong;
+            return xldulieu.LoadData(sql);
+        }
+        static public int Insert(DatPhong dp)
+        {
+            if (IsExist(dp))
+                return 0;
+            string sql = string.Format("Insert into DatPhong(MaPhong, MaKhach, NgayThue) " +
+                "Values({0}, {1}, '{2}')", dp.MaPhong,dp.MaKhach, dp.NgayThue.ToString("MM-dd-yyyy HH:mm:ss.fff"));
+            return xldulieu.Execute(sql);
+        }
+
+        static public int Delete(int maPhong)
+        {
+            string sql = "delete from DatPhong where MaPhong = " +maPhong;
             return xldulieu.Execute(sql);
         }
         static public DatPhong LoadOne(int maPhong)

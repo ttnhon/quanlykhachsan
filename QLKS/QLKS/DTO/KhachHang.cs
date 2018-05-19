@@ -8,12 +8,12 @@ namespace QLKS.DTO
 {
     public class KhachHang
     {
-        public int MaKhach;
-        public string TenKhach;
-        public string SoCMND;
-        public string DiaChi;
-        public string DienThoai;
-        public int LoaiKhach;
+        public int MaKhach { get; set; }
+        public string TenKhach { get; set; }
+        public string SoCMND { get; set; }
+        public string DiaChi { get; set; }
+        public string DienThoai { get; set; }
+        public int LoaiKhach { get; set; }
 
         public KhachHang()
         {

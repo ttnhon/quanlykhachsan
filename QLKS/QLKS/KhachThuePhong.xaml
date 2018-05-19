@@ -1,0 +1,61 @@
+﻿<Window x:Class="QLKS.KhachThuePhong"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:QLKS"
+        mc:Ignorable="d"
+        Title="KhachThuePhong" SizeToContent="Height" Height="Auto" Width="738" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Label Content="Mã phòng" HorizontalAlignment="Left" Height="31" Margin="10,10,0,0" VerticalAlignment="Top" Width="73"/>
+        <TextBox x:Name="txtMaPhong" HorizontalAlignment="Left" Height="31" Margin="88,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="110" IsReadOnly="True"/>
+        <Label Content="Loại phòng" HorizontalAlignment="Left" Height="31" Margin="215,10,0,0" VerticalAlignment="Top" Width="79"/>
+        <TextBox x:Name="txtLoaiPhong" HorizontalAlignment="Left" Height="31" Margin="299,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="132" IsReadOnly="True"/>
+        <DataGrid x:Name="dgDanhSach" ItemsSource="{Binding KhachHang}" AutoGenerateColumns="False" CanUserAddRows="True" Margin="11,60,10,0" Height="226" VerticalAlignment="Top">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Path=MaKhach}" Header="Mã khách" Width="65"/>
+                <DataGridTextColumn Binding="{Binding Path=TenKhach}"  Header="Họ tên" Width="150"/>
+                <DataGridTextColumn Binding="{Binding Path=SoCMND}" Header="Số CMND/Passport" Width="150"/>
+                <DataGridTextColumn Binding="{Binding Path=DiaChi}" Header="Địa chỉ" Width="120"/>
+                <DataGridTextColumn Binding="{Binding Path=DienThoai}"  Header="Điện thoại" Width="100"/>
+                <DataGridTextColumn Binding="{Binding Path=LoaiKhach}" Header="Loại khách" Width="100"/>
+
+            </DataGrid.Columns>
+        </DataGrid>
+        <DatePicker x:Name="dpNgayThue" HorizontalAlignment="Left" Height="31" Margin="576,10,0,0" VerticalAlignment="Top" Width="131"/>
+        <Label Content="Ngày thuê phòng" HorizontalAlignment="Left" Height="31" Margin="452,10,0,0" VerticalAlignment="Top" Width="110"/>
+
+        <Button x:Name="BtnThuePhong" Content="Thuê phòng" Height="36" Margin="611,291,11,0" VerticalAlignment="Top" Click="BtnThuePhong_Click"/>
+        <Label Content="*Để thêm khách hàng thuê phòng, nhấn 'Thêm thông tin khách hàng' bên dưới" 
+               Foreground="Red" HorizontalAlignment="Left" Height="31" Margin="11,310,0,0" VerticalAlignment="Top" Width="432"/>
+        <Expander Header="Thêm thông tin khách hàng" Height="Auto" Margin="11,346,11,10">
+            <Grid>
+                <DataGrid x:Name="dataGridDsKhach" Height="234" ItemsSource="{Binding KhachHang}" AutoGenerateColumns="False" Margin="355,48,10,0" VerticalAlignment="Top" SelectionChanged="dataGridDsKhach_SelectionChanged">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Binding="{Binding MaKhach}" ClipboardContentBinding="{x:Null}" Header="Mã khách" Width="65"/>
+                        <DataGridTextColumn Binding="{Binding TenKhach}" ClipboardContentBinding="{x:Null}" Header="Họ tên" Width="150"/>
+                        <DataGridTextColumn Binding="{Binding DiaChi}" ClipboardContentBinding="{x:Null}" Header="Địa chỉ" Width="100"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+                <Label Content="Mã khách" HorizontalAlignment="Left" Height="30" Margin="10,10,0,0" VerticalAlignment="Top" Width="75"/>
+                <TextBox x:Name="txtMaKhach" IsReadOnly="True" HorizontalAlignment="Left" Height="30" Margin="142,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="114"/>
+                <Label Content="Họ tên" HorizontalAlignment="Left" Height="32" Margin="10,48,0,0" VerticalAlignment="Top" Width="75"/>
+                <TextBox x:Name="txtHoTen" HorizontalAlignment="Left" Height="32" Margin="142,48,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="194"/>
+                <Label Content="Số CMND/Passport" HorizontalAlignment="Left" Height="34" Margin="10,85,0,0" VerticalAlignment="Top" Width="132"/>
+                <TextBox x:Name="txtCMND" HorizontalAlignment="Left" Height="34" Margin="142,85,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="194"/>
+                <Label Content="Địa chỉ" HorizontalAlignment="Left" Height="34" Margin="10,125,0,0" VerticalAlignment="Top" Width="75"/>
+                <Label Content="Điện thoại" HorizontalAlignment="Left" Height="34" Margin="10,164,0,0" VerticalAlignment="Top" Width="75"/>
+                <Label Content="Loại khách" HorizontalAlignment="Left" Height="40" Margin="10,203,0,0" VerticalAlignment="Top" Width="75"/>
+                <TextBox x:Name="txtDiaChi" HorizontalAlignment="Left" Height="34" Margin="142,125,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="194"/>
+                <TextBox x:Name="txtDienThoai" HorizontalAlignment="Left" Height="34" Margin="142,164,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="194"/>
+                <ComboBox x:Name="cbbLoaiKhach" ItemsSource="{Binding}" DisplayMemberPath="LoaiKhach" SelectedItem ="{Binding MaLoai}" HorizontalAlignment="Left" Height="31" Margin="142,203,0,0" VerticalAlignment="Top" Width="161"/>
+                <Button Content="Thêm" HorizontalAlignment="Left" Height="34" Margin="106,248,0,0" VerticalAlignment="Top" Width="121" Click="Button_Click"/>
+                <TextBox x:Name="txtTimKiem" Height="30" Margin="477,10,10,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" TextChanged="txtTimKiem_TextChanged"/>
+                <Label Content="Tìm theo tên khách" HorizontalAlignment="Left" Height="30" Margin="355,10,0,0" VerticalAlignment="Top" Width="117"/>
+                <Button x:Name="BtnHuy" Content="Clear" Foreground="White" Background="Red" HorizontalAlignment="Left" Height="30" Margin="273,10,0,0" VerticalAlignment="Top" Width="63" Click="BtnHuy_Click"/>
+
+            </Grid>
+        </Expander>
+
+    </Grid>
+</Window>

@@ -26,14 +26,15 @@ namespace QLKS
         public DangNhap()
         {
             InitializeComponent();
-            
+            ThuePhong a = new ThuePhong();
+            a.Show();
         }
         
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             string UserName = inputUsername.Text;
             string Password = inputPassword.Password.ToString();
-            Password = HashPassword.hash(Password);
+            //Password = HashPassword.hash(Password);
             //bool check = NguoiDungDAO.CheckTaiKhoan(UserName, Password);
             string GetPassword = NguoiDungDAO.GetMatKhauByUser(UserName);
 

@@ -70,5 +70,17 @@ namespace QLKS.DAO
             cnn.Close();
             return affectCount;
         }
+        static XL_DULIEU xldulieu = new XL_DULIEU();
+        static public int GetSoLuongKhach()
+        {
+            string sql = "select count(*) from KhachHang";
+            DataTable table = xldulieu.LoadData(sql);
+            return table.Rows[0].Field<int>(0);
+        }
+        static public DataTable TimTheoTen(string tenKhach)
+        {
+            string sql = "select * from KhachHang where TenKhach like N'%" + tenKhach + "%'";
+            return xldulieu.LoadData(sql);
+        }
     }
 }

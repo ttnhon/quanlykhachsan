@@ -91,6 +91,7 @@ namespace QLKS
             if(trangThai == 3 || trangThai == 4)
             {
                 thuephong.IsEnabled = false;
+                thuephong.Header = "Khách thuê phòng";
                 thongtinkhach.IsEnabled = false;
                 capnhatdichvu.IsEnabled = false;
                 doiphong.IsEnabled = false;
@@ -117,6 +118,7 @@ namespace QLKS
             if(tinhTrang == 1)
             {
                 thuephong.IsEnabled = true;
+                thuephong.Header = "Khách thuê phòng";
                 thongtinkhach.IsEnabled = false;
                 capnhatdichvu.IsEnabled = false;
                 doiphong.IsEnabled = false;
@@ -133,6 +135,7 @@ namespace QLKS
             if(tinhTrang==4)
             {
                 thuephong.IsEnabled = true;
+                thuephong.Header = "Khách thuê phòng";
                 thongtinkhach.IsEnabled = false;
                 capnhatdichvu.IsEnabled = false;
                 doiphong.IsEnabled = false;
@@ -142,6 +145,23 @@ namespace QLKS
                 chitietdatphong.IsEnabled = true;
                 donphong.IsEnabled = true;
                 suaphong.IsEnabled = true;
+                donphong.Header = "Dọn phòng";
+                suaphong.Header = "Sửa phòng";
+                return;
+            }
+            if(tinhTrang==2&&trangThai==1)
+            {
+                thuephong.IsEnabled = true;
+                thuephong.Header = "Trả phòng";
+                thongtinkhach.IsEnabled = true;
+                capnhatdichvu.IsEnabled = true;
+                doiphong.IsEnabled = true;
+                khachrangoai.IsEnabled = true;
+                datphong.IsEnabled = false;
+                chitietdatphong.IsEnabled = false;
+                donphong.IsEnabled = false;
+                suaphong.IsEnabled = false;
+                datphong.Header = "Đặt phòng";
                 donphong.Header = "Dọn phòng";
                 suaphong.Header = "Sửa phòng";
                 return;
@@ -232,10 +252,14 @@ namespace QLKS
             int trangthai = PhongDAO.GetTrangThaiPhong(maPhong);
             if(tinhtrang == 4)
             {
+                if (MessageBox.Show("Xác nhận hủy đặt phòng?", "Thông báo", MessageBoxButton.YesNo, MessageBoxImage.Warning) == MessageBoxResult.No)
+                {
+                    return;
+                }
                 DatPhong dp = DatPhongDAO.LoadOne(maPhong);
                 if (dp != null)
                 {
-                    DatPhongDAO.Delete(dp);
+                    DatPhongDAO.Delete(maPhong);
                     PhongDAO.SetTinhTrangPhong(maPhong, 1);
                 }
                 else
@@ -243,10 +267,52 @@ namespace QLKS
             }
             else
             {
-
+                ManHinhDatPhong manHinhDatPhong = new ManHinhDatPhong(maPhong);
+                manHinhDatPhong.Show();
             }
             wrapPanel.Children.Clear();
             LoadPhong();
+        }
+
+        private void MenuChiTietDatPhong_Click(object sender, RoutedEventArgs e)
+        {
+            MenuItem mnu = sender as MenuItem;
+            ContextMenu menu = (ContextMenu)mnu.Parent;
+            Button button = menu.PlacementTarget as Button;
+            int maPhong = Int32.Parse(button.Name.Substring(1));
+            int tinhtrang = PhongDAO.GetTinhTrangPhong(maPhong);
+            int trangthai = PhongDAO.GetTrangThaiPhong(maPhong);
+            ChiTietDatPhong chiTietDatPhong = new ChiTietDatPhong(maPhong);
+            chiTietDatPhong.Show();
+        }
+
+        private void btn_Capnhat_Click(object sender, RoutedEventArgs e)
+        {
+            wrapPanel.Children.Clear();
+            LoadPhong();
+        }
+
+        private void MenuKhachThuePhong_Click(object sender, RoutedEventArgs e)
+        {
+            MenuItem mnu = sender as MenuItem;
+            ContextMenu menu = (ContextMenu)mnu.Parent;
+            Button button = menu.PlacementTarget as Button;
+            int maPhong = Int32.Parse(button.Name.Substring(1));
+            int tinhtrang = PhongDAO.GetTinhTrangPhong(maPhong);
+            int trangthai = PhongDAO.GetTrangThaiPhong(maPhong);
+            if (tinhtrang == 2)
+            {
+                return;
+            }
+            KhachThuePhong khachThuePhong = new KhachThuePhong(maPhong);
+            khachThuePhong.Show();
+
+            
+        }
+
+        private void btn_Home_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
