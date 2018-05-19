@@ -59,19 +59,19 @@
             <Label Content="Số điện thoại:" Canvas.Left="10" Canvas.Top="146"/>
             <Label Content="Số phòng đặt:" Canvas.Left="10" Canvas.Top="176"/>
             <Label Content="Loại khách hàng:" Canvas.Left="10" Canvas.Top="207"/>
-            <TextBox x:Name="txtMa" Height="23" Canvas.Left="109" TextWrapping="Wrap" Text="TextBox" Canvas.Top="10" Width="138" IsEnabled="False"/>
-            <TextBox x:Name="txtHoTen" Height="23" Canvas.Left="109" TextWrapping="Wrap" Text="TextBox" Canvas.Top="40" Width="138" IsReadOnly="False" IsEnabled="False"/>
-            <TextBox x:Name="txtSDT" Height="23" Canvas.Left="109" TextWrapping="Wrap" Text="TextBox" Canvas.Top="146" Width="138" IsEnabled="False"/>
-            <Button x:Name="btnApplyThem" Content="Thêm" Canvas.Left="117" Canvas.Top="243" Width="66" IsEnabled="False" Click="btnApplyThem_Click"/>
-            <Button Content="Danh sách phòng" Canvas.Left="10" Canvas.Top="243" Width="102"/>
-            <TextBox x:Name="txtCMND" Height="23" Canvas.Left="109" TextWrapping="Wrap" Text="TextBox" Canvas.Top="71" Width="138" IsReadOnly="False" IsEnabled="False"/>
-            <TextBox x:Name="txtDiaChi" Height="39" Canvas.Left="109" TextWrapping="Wrap" Text="TextBox" Canvas.Top="102" Width="138" IsReadOnly="False" IsEnabled="False"/>
-            <TextBox x:Name="txtMaPhong" Height="23" Canvas.Left="109" TextWrapping="Wrap" Text="TextBox" Canvas.Top="176" Width="138" IsEnabled="False"/>
+            <TextBox x:Name="txtMa" Height="23" Canvas.Left="109" TextWrapping="Wrap" Canvas.Top="10" Width="138" IsEnabled="False"/>
+            <TextBox x:Name="txtHoTen" Height="23" Canvas.Left="109" TextWrapping="Wrap" Canvas.Top="40" Width="138" IsReadOnly="False" IsEnabled="False"/>
+            <TextBox x:Name="txtSDT" Height="23" Canvas.Left="109" TextWrapping="Wrap" Canvas.Top="146" Width="138" IsEnabled="False"/>
+            <Button x:Name="btnApplyThem" Content="Thêm" Canvas.Left="78" Canvas.Top="243" Width="80" Height="25" IsEnabled="False" Click="btnApplyThem_Click"/>
+            <!--<Button Content="Danh sách phòng" Canvas.Left="10" Canvas.Top="243" Width="102"/>-->
+            <TextBox x:Name="txtCMND" Height="23" Canvas.Left="109" TextWrapping="Wrap" Canvas.Top="71" Width="138" IsReadOnly="False" IsEnabled="False"/>
+            <TextBox x:Name="txtDiaChi" Height="39" Canvas.Left="109" TextWrapping="Wrap" Canvas.Top="102" Width="138" IsReadOnly="False" IsEnabled="False"/>
+            <TextBox x:Name="txtMaPhong" Height="23" Canvas.Left="109" TextWrapping="Wrap" Canvas.Top="176" Width="138" IsEnabled="False"/>
             <ComboBox x:Name="cbcLoai" Canvas.Left="109" Canvas.Top="207" Width="138" IsEnabled="False" SelectedValuePath="Content">
-                <ComboBoxItem Content="Thường" HorizontalAlignment="Left" Width="136"/>
-                <ComboBoxItem Content="Vip" HorizontalAlignment="Left" Width="136"/>
+                <ComboBoxItem Content="Nội địa" HorizontalAlignment="Left" Width="136"/>
+                <ComboBoxItem Content="Nước ngoài" HorizontalAlignment="Left" Width="136"/>
             </ComboBox>
-            <Button x:Name="btnApplySua" Content="Sửa" Canvas.Left="188" Canvas.Top="243" Width="59" IsEnabled="False" Click="btnApplySua_Click"/>
+            <Button x:Name="btnApplySua" Content="Sửa" Canvas.Left="167" Canvas.Top="243" Width="80" Height="25" IsEnabled="False" Click="btnApplySua_Click"/>
         </Canvas>
         <Canvas HorizontalAlignment="Left" Height="272" Margin="257,71,0,0" VerticalAlignment="Top" Width="320">
             <DataGrid x:Name="dgDanhSach" Height="252" Width="302" Canvas.Left="10" Canvas.Top="10" ItemsSource="{Binding KhachHang}" AutoGenerateColumns="False">

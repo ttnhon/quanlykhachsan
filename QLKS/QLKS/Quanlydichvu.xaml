@@ -53,15 +53,15 @@
             <Label Content="Khả dụng:" Canvas.Left="10" Canvas.Top="216"/>
             <TextBox x:Name="txtMaDV" Height="23" Canvas.Left="121" TextWrapping="Wrap"  Canvas.Top="10" Width="145" IsEnabled="False"/>
             <TextBox x:Name="txtTenDV" Height="23" Canvas.Left="121" TextWrapping="Wrap" Canvas.Top="48" Width="145" IsEnabled="False"/>
-            <Button x:Name="btnApplyThem" Content="Thêm" Canvas.Left="117" Canvas.Top="254" Width="75" IsEnabled="False" Click="btnApplyThem_Click"/>
+            <Button x:Name="btnApplyThem" Content="Thêm" Canvas.Left="93" Canvas.Top="254" Width="80" Height="25" IsEnabled="False" Click="btnApplyThem_Click" FontSize="14"/>
             <TextBox x:Name="txtGhiChu" Height="78" Canvas.Left="121" TextWrapping="Wrap" Canvas.Top="89" Width="145" IsEnabled="False"/>
             <TextBox x:Name="txtDonGia" Height="23" Canvas.Left="121" TextWrapping="Wrap" Canvas.Top="181" Width="145" IsEnabled="False"/>
             <ComboBox x:Name="cbcKhaDung" Canvas.Left="121" Canvas.Top="216" Width="145" IsEnabled="False" SelectedValuePath="Content">
                 <ComboBoxItem Content="Có" HorizontalAlignment="Left" Width="136"/>
                 <ComboBoxItem Content="Không" HorizontalAlignment="Left" Width="136"/>
             </ComboBox>
-            <Button Content="Danh sách phòng" Canvas.Left="10" Canvas.Top="254" Width="102" RenderTransformOrigin="0.519,1.663"/>
-            <Button x:Name="btnApplySua" Content="Sửa" Canvas.Left="197" Canvas.Top="254" Width="69" IsEnabled="False" Click="btnApplySua_Click"/>
+            <!--<Button Content="Danh sách phòng" Canvas.Left="10" Canvas.Top="254" Width="102" RenderTransformOrigin="0.519,1.663"/>-->
+            <Button x:Name="btnApplySua" Content="Sửa" Canvas.Left="186" Canvas.Top="254" Width="80" Height="25" IsEnabled="False" Click="btnApplySua_Click" FontSize="14"/>
         </Canvas>
         <Canvas HorizontalAlignment="Left" Height="286" Margin="275,65,0,0" VerticalAlignment="Top" Width="242">
             <DataGrid x:Name="dgDanhSach" Height="262" Width="222" Canvas.Left="10" ItemsSource="{Binding DichVu}" Canvas.Top="10" AutoGenerateColumns="False">

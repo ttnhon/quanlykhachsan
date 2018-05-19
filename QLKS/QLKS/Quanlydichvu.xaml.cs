@@ -21,9 +21,11 @@ namespace QLKS
     /// </summary>
     public partial class Quanlydichvu : Window
     {
-        public Quanlydichvu()
+        string account;
+        public Quanlydichvu(string account)
         {
             InitializeComponent();
+            this.account = account;
             LoadDanhSach();
         }
         private void LoadDanhSach()
@@ -55,7 +57,10 @@ namespace QLKS
         }
         private void btn_TrangChu_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Thực thi nút Trang chủ!");
+            //MessageBox.Show("Thực thi nút Trang chủ!");
+            Trangchu tc = new Trangchu(account);
+            tc.Show();
+            this.Hide();
         }
         private void btn_Them_Click(object sender, RoutedEventArgs e)
         {

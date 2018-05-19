@@ -10,14 +10,15 @@ namespace QLKS.DAO
 {
     public class XL_DULIEU
     {
-        static public SqlConnectionStringBuilder sConnB = new SqlConnectionStringBuilder()
-        {
-            DataSource = "REFICUL",
-            InitialCatalog = "quanlykhachsan",
-            //IntegratedSecurity = true,
-            UserID = "sa",
-            Password = "sa"
-        };
+        static public SqlConnectionStringBuilder sConnB = App.sConnB;//new SqlConnectionStringBuilder()
+        //{
+        //    //DataSource = "REFICUL",
+        //    DataSource = "NVPIT\\SQLEXPRESS",
+        //    InitialCatalog = "quanlykhachsan",
+        //    //IntegratedSecurity = true,
+        //    UserID = "sa",
+        //    Password = "sa"
+        //};
 
         public DataTable LoadData(string sql)
         {

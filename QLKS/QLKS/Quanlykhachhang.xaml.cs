@@ -21,9 +21,11 @@ namespace QLKS
     /// </summary>
     public partial class Quanlykhachhang : Window
     {
-        public Quanlykhachhang()
+        string account;
+        public Quanlykhachhang(string account)
         {
             InitializeComponent();
+            this.account = account;
             LoadDanhSach();
         }
         //Mở cho phép chỉnh sửa (thêm, sửa)
@@ -51,13 +53,13 @@ namespace QLKS
             btnApplySua.IsEnabled = false;
             btnApplyThem.IsEnabled = false;
         }
-        //Trở về trang chủ (chưa làm)
+        //Trở về trang chủ (xong)
         private void Button_TrangChu(object sender, RoutedEventArgs e)
         {
-            //Trangchu tc = new Trangchu();
-            //tc.Show();
-            //this.Hide();
-            MessageBox.Show("Button Trangchu");
+            Trangchu tc = new Trangchu(account);
+            tc.Show();
+            this.Hide();
+            //MessageBox.Show("Button Trangchu");
         }
 
         //Cho phép thêm khách hàng mới
@@ -71,7 +73,7 @@ namespace QLKS
             txtCMND.Text = "";
             txtDiaChi.Text = "";
             txtSDT.Text = "";
-            cbcLoai.SelectedValue = "Thường";
+            cbcLoai.SelectedValue = "Nội địa";
             txtMaPhong.IsEnabled = false;
             btnApplySua.IsEnabled = false;
             btnApplyThem.IsEnabled = true;
@@ -138,11 +140,11 @@ namespace QLKS
                 }
                 if (kh.LoaiKhach == 1)
                 {
-                    cbcLoai.SelectedValue = "Thường";
+                    cbcLoai.SelectedValue = "Nội địa";
                 }
                 else
                 {
-                    cbcLoai.SelectedValue = "Vip";
+                    cbcLoai.SelectedValue = "Nước ngoài";
                 }
             }
             else
@@ -163,7 +165,7 @@ namespace QLKS
             string diachi = txtDiaChi.Text;
             string dienthoai = txtSDT.Text;
             int loaikhach = 0;
-            if(cbcLoai.SelectedValue.ToString() == "Thường")
+            if(cbcLoai.SelectedValue.ToString() == "Nội địa")
             {
                 loaikhach = 1;
             }
@@ -198,7 +200,7 @@ namespace QLKS
             string diachi = txtDiaChi.Text;
             string dienthoai = txtSDT.Text;
             int loaikhach = 0;
-            if (cbcLoai.SelectedValue.ToString() == "Thường")
+            if (cbcLoai.SelectedValue.ToString() == "Nội địa")
             {
                 loaikhach = 1;
             }

@@ -29,25 +29,25 @@
                     <Label Content="QUẢN LÝ PHÒNG" HorizontalAlignment="Center" FontSize="16" FontWeight="Bold" Height="42" Width="140" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
                 </StackPanel>
             </Button>
-            <Button x:Name="btnQuanLyLoaiPhong" Background="{x:Null}" BorderBrush="{x:Null}"  Width="140" Height="140" VerticalAlignment="Center" HorizontalContentAlignment="Center" Margin="20,10,10,0">
+            <Button x:Name="btnQuanLyLoaiPhong" Background="{x:Null}" BorderBrush="{x:Null}"  Width="140" Height="140" VerticalAlignment="Center" HorizontalContentAlignment="Center" Margin="20,10,10,0" Click="btnQuanLyLoaiPhong_Click">
                 <StackPanel Height="160" Width="140">
                     <Image Height="100" Source="Hinh/icons8-bed-100.png"/>
                     <Label Content="QUẢN LÝ LOẠI PHÒNG" HorizontalAlignment="Center" FontWeight="Bold" Height="42" Width="140" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
                 </StackPanel>
             </Button>
-            <Button x:Name="btnKhachHang" Background="{x:Null}" BorderBrush="{x:Null}"  Width="140" Height="140" VerticalAlignment="Center" HorizontalContentAlignment="Center" Margin="20,10,10,0">
+            <Button x:Name="btnKhachHang" Background="{x:Null}" BorderBrush="{x:Null}"  Width="140" Height="140" VerticalAlignment="Center" HorizontalContentAlignment="Center" Margin="20,10,10,0" Click="btnKhachHang_Click">
                 <StackPanel Height="160" Width="140">
                     <Image Height="100" Source="Hinh/icons8-contacts-100.png"/>
                     <Label Content="KHÁCH HÀNG" HorizontalAlignment="Center" FontSize="16" FontWeight="Bold" Height="42" Width="140" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
                 </StackPanel>
             </Button>
-            <Button x:Name="btnDichVu" Background="{x:Null}" BorderBrush="{x:Null}"  Width="140" Height="140" VerticalAlignment="Center" HorizontalContentAlignment="Center" Margin="20,10,10,0">
+            <Button x:Name="btnDichVu" Background="{x:Null}" BorderBrush="{x:Null}"  Width="140" Height="140" VerticalAlignment="Center" HorizontalContentAlignment="Center" Margin="20,10,10,0" Click="btnDichVu_Click">
                 <StackPanel Height="160" Width="140">
                     <Image Height="100" Source="Hinh/icons8-waiter-100.png"/>
                     <Label Content="DỊCH VỤ" HorizontalAlignment="Center" FontSize="16" FontWeight="Bold" Height="42" Width="140" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
                 </StackPanel>
             </Button>
-            <Button x:Name="btnDangXuat" Background="{x:Null}" BorderBrush="{x:Null}" Width="140" Height="140" VerticalAlignment="Center" HorizontalContentAlignment="Center" Margin="20,10,10,0">
+            <Button x:Name="btnDangXuat" Background="{x:Null}" BorderBrush="{x:Null}" Width="140" Height="140" VerticalAlignment="Center" HorizontalContentAlignment="Center" Margin="20,10,10,0" Click="btnDangXuat_Click">
                 <StackPanel Height="160" Width="140">
                     <Image Height="100" Source="Hinh/icons8-exit-100.png"/>
                     <Label Content="ĐANG XUẤT" HorizontalAlignment="Center" FontSize="16" FontWeight="Bold" Height="42" Width="140" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>

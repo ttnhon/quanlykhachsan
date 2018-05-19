@@ -44,9 +44,9 @@ namespace QLKS
             else
             //MessageBox.Show("Đăng nhập thành công!");
             {
-                string HoTen = NguoiDungDAO.GetHoTenByUser(UserName);
+                //string HoTen = NguoiDungDAO.GetHoTenByUser(UserName);
 
-                Trangchu tc = new Trangchu(HoTen, UserName);
+                Trangchu tc = new Trangchu(UserName);
                 //Trangchu tc = new Trangchu();
                 tc.Show();
                 this.Close();
