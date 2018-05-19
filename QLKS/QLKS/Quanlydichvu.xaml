@@ -64,7 +64,7 @@
             <Button x:Name="btnApplySua" Content="Sửa" Canvas.Left="186" Canvas.Top="254" Width="80" Height="25" IsEnabled="False" Click="btnApplySua_Click" FontSize="14"/>
         </Canvas>
         <Canvas HorizontalAlignment="Left" Height="286" Margin="275,65,0,0" VerticalAlignment="Top" Width="242">
-            <DataGrid x:Name="dgDanhSach" Height="262" Width="222" Canvas.Left="10" ItemsSource="{Binding DichVu}" Canvas.Top="10" AutoGenerateColumns="False">
+            <DataGrid x:Name="dgDanhSach" Height="262" Width="222" Canvas.Left="10" ItemsSource="{Binding DichVu}" Canvas.Top="10" AutoGenerateColumns="False" SelectionChanged="grid_DichVu_SelectionChanged">
                 <DataGrid.Columns>
                     <DataGridTextColumn Binding="{Binding MaDV}" ClipboardContentBinding="{x:Null}" Header="Mã" Width="40"/>
                     <DataGridTextColumn Binding="{Binding TenDV}" ClipboardContentBinding="{x:Null}" Header="Tên dịch vụ" Width="*"/>

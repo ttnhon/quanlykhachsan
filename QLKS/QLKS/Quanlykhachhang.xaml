@@ -74,7 +74,7 @@
             <Button x:Name="btnApplySua" Content="Sửa" Canvas.Left="167" Canvas.Top="243" Width="80" Height="25" IsEnabled="False" Click="btnApplySua_Click"/>
         </Canvas>
         <Canvas HorizontalAlignment="Left" Height="272" Margin="257,71,0,0" VerticalAlignment="Top" Width="320">
-            <DataGrid x:Name="dgDanhSach" Height="252" Width="302" Canvas.Left="10" Canvas.Top="10" ItemsSource="{Binding KhachHang}" AutoGenerateColumns="False">
+            <DataGrid x:Name="dgDanhSach" Height="252" Width="302" Canvas.Left="10" Canvas.Top="10" ItemsSource="{Binding KhachHang}" AutoGenerateColumns="False" SelectionChanged="dgDanhSach_SelectionChanged">
                 <DataGrid.Columns>
                     <DataGridTextColumn Binding="{Binding MaKhach}" ClipboardContentBinding="{x:Null}" Header="Mã khách" Width="65"/>
                     <DataGridTextColumn Binding="{Binding TenKhach}" ClipboardContentBinding="{x:Null}" Header="Họ tên" Width="*"/>

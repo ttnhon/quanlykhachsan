@@ -2,6 +2,7 @@
 using QLKS.DTO;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -181,7 +182,12 @@ namespace QLKS
             }
             KhachHang kh = new KhachHang(-100, hoten, cmnd, diachi, dienthoai, loaikhach);
             int check = KhachHangDAO.Insert(kh);
-            if(check != -1)
+            if (check == 0)
+            {
+                MessageBox.Show("Khách hàng đã có trong danh sách.");
+                return;
+            }
+            if (check != -1)
             {
                 MessageBox.Show("Thêm mới khách hàng thành công!");
             }
@@ -216,6 +222,11 @@ namespace QLKS
             }
             KhachHang kh = new KhachHang(makhach, hoten, cmnd, diachi, dienthoai, loaikhach);
             int check = KhachHangDAO.Update(kh);
+            if (check == 0)
+            {
+                MessageBox.Show("Khách hàng không có trong danh sách!");
+                return;
+            }
             if (check != -1)
             {
                 MessageBox.Show("Sửa thông tin khách hàng thành công!");
@@ -227,6 +238,49 @@ namespace QLKS
             LoadDanhSach();
         }
 
-        
+        private void dgDanhSach_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            try
+            {
+                DataRowView rowview = dgDanhSach.SelectedItem as DataRowView;
+                if (rowview != null)
+                {
+                    int makh = Int32.Parse(rowview.Row["MaKhach"].ToString());
+                    KhachHang kh = KhachHangDAO.LoadOne(makh);
+
+                    if (kh != null)
+                    {
+                        txtMa.Text = kh.MaKhach.ToString();
+                        txtHoTen.Text = kh.TenKhach;
+                        txtCMND.Text = kh.SoCMND;
+                        txtDiaChi.Text = kh.DiaChi;
+                        txtSDT.Text = kh.DienThoai;
+                        int MaPhong = DatPhongDAO.GetMaPhong(kh.MaKhach);
+                        if (MaPhong == 0)
+                        {
+                            txtMaPhong.Text = "Chưa đặt phòng";
+                        }
+                        else
+                        {
+                            txtMaPhong.Text = MaPhong.ToString();
+                        }
+                        if (kh.LoaiKhach == 1)
+                        {
+                            cbcLoai.SelectedValue = "Nội địa";
+                        }
+                        else
+                        {
+                            cbcLoai.SelectedValue = "Nước ngoài";
+                        }
+                    }
+                    else
+                        MessageBox.Show("Không tìm thấy khách hàng!");
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

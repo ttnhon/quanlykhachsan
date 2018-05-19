@@ -31,7 +31,10 @@ namespace QLKS
 
         private void btnQuanLyLoaiPhong_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Quản lý loại phòng");
+            //MessageBox.Show("Quản lý loại phòng");
+            Quanlyloaiphong qllp = new Quanlyloaiphong(account);
+            qllp.Show();
+            this.Hide();
         }
 
         private void BtnThuePhong_Click(object sender, RoutedEventArgs e)

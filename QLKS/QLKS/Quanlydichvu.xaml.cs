@@ -2,6 +2,7 @@
 using QLKS.DTO;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -66,6 +67,9 @@ namespace QLKS
         {
             ChoPhepChinhSua();
             txtMaDV.Text = "";
+            txtTenDV.Text = "";
+            txtGhiChu.Text = "";
+            txtDonGia.Text = "";
             txtMaDV.IsEnabled = false;
             cbcKhaDung.IsEnabled = false;
             btnApplySua.IsEnabled = false;
@@ -104,16 +108,16 @@ namespace QLKS
                 return;
             }
 
-            DichVu kh = DichVuDAO.LoadOne(MaDV);
+            DichVu dv = DichVuDAO.LoadOne(MaDV);
 
-            if (kh != null)
+            if (dv != null)
             {
-                txtMaDV.Text = kh.MaDV.ToString();
-                txtTenDV.Text = kh.TenDV;
-                txtGhiChu.Text = kh.GhiChu;
-                txtDonGia.Text = kh.DonGia.ToString();
+                txtMaDV.Text = dv.MaDV.ToString();
+                txtTenDV.Text = dv.TenDV;
+                txtGhiChu.Text = dv.GhiChu;
+                txtDonGia.Text = dv.DonGia.ToString();
                 int KhaDung = -1;
-                KhaDung = kh.ConSuDung;
+                KhaDung = dv.ConSuDung;
                 if (KhaDung==1)
                 {
                     cbcKhaDung.SelectedValue = "Có";
@@ -159,6 +163,11 @@ namespace QLKS
             }
             DichVu dv = new DichVu(-100, tendv, dongia, ghichu, 1);
             int check = DichVuDAO.Insert(dv);
+            if (check == 0)
+            {
+                MessageBox.Show("Dịch vụ đã có trong danh sách!");
+                return;
+            }
             if (check != -1)
             {
                 MessageBox.Show("Thêm mới dịch vụ thành công!");
@@ -203,6 +212,11 @@ namespace QLKS
             }
             DichVu dv = new DichVu(madv, tendv, dongia, ghichu, khadung);
             int check = DichVuDAO.Update(dv);
+            if (check == 0)
+            {
+                MessageBox.Show("Dịch vụ không tồn tại");
+                return;
+            }
             if (check != -1)
             {
                 MessageBox.Show("Sửa thông tin dịch vụ thành công!");
@@ -212,6 +226,44 @@ namespace QLKS
                 MessageBox.Show("Sửa thông tin dịch vụ không thành công!");
             }
             LoadDanhSach();
+        }
+
+        private void grid_DichVu_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            try
+            {
+                KhongChoPhepChinhSua();
+                DichVu dv = new DichVu();
+                DataRowView rowview = dgDanhSach.SelectedItem as DataRowView;
+                if (rowview != null)
+                {
+                    int madv = Int32.Parse(rowview.Row["MaDV"].ToString());
+                    dv = DichVuDAO.LoadOne(madv);
+                    if (dv != null)
+                    {
+                        txtMaDV.Text = dv.MaDV.ToString();
+                        txtTenDV.Text = dv.TenDV;
+                        txtGhiChu.Text = dv.GhiChu;
+                        txtDonGia.Text = dv.DonGia.ToString();
+                        int KhaDung = -1;
+                        KhaDung = dv.ConSuDung;
+                        if (KhaDung == 1)
+                        {
+                            cbcKhaDung.SelectedValue = "Có";
+                        }
+                        else
+                        {
+                            cbcKhaDung.SelectedValue = "Không";
+                        }
+                    }
+                    else
+                        MessageBox.Show("Không tìm thấy dịch vụ!");
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
     }
 }
