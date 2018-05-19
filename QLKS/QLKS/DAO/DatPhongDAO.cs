@@ -34,5 +34,19 @@ namespace QLKS.DAO
                 table.Rows[0].Field<DateTime>(2));
             return dp;
         }
+        static public int GetMaPhong(int makhach)
+        {
+            string sql = "select * from DatPhong where MaKhach = " + makhach;
+            
+            DataTable table = xldulieu.LoadData(sql);
+ 
+            if (table.Rows.Count < 1)
+            {
+                return 0;
+            }
+            else
+                return table.Rows[0].Field<int>(0);
+        }
+
     }
 }

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using QLKS.DAO;
+using QLKS.DTO;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -125,14 +127,14 @@ namespace QLKS
                 txtCMND.Text = kh.SoCMND;
                 txtDiaChi.Text = kh.DiaChi;
                 txtSDT.Text = kh.DienThoai;
-                string MaPhong = DatPhongDAO.GetMaPhong(kh.MaKhach.ToString());
-                if(MaPhong==null)
+                int MaPhong = DatPhongDAO.GetMaPhong(kh.MaKhach);
+                if(MaPhong==0)
                 {
                     txtMaPhong.Text = "Chưa đặt phòng";
                 }
                 else
                 {
-                    txtMaPhong.Text = MaPhong;
+                    txtMaPhong.Text = MaPhong.ToString();
                 }
                 if (kh.LoaiKhach == 1)
                 {

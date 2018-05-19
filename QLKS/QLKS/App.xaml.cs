@@ -18,15 +18,15 @@ namespace QLKS
     {
         static public SqlConnectionStringBuilder sConnB = new SqlConnectionStringBuilder()
         {
-<<<<<<< HEAD
-            DataSource = "NVPIT\\SQLEXPRESS",
-=======
-            DataSource = "desktop-viil54u\\huynhphiphuc",
->>>>>>> 800f858c5a2870df89849eb974afcdae5526463b
+
+            //DataSource = "NVPIT\\SQLEXPRESS",
+
+            DataSource = "REFICUL",
+
             InitialCatalog = "quanlykhachsan",
-            IntegratedSecurity = true,
-            //UserID = "sa",
-            //Password = "sa"
+            //IntegratedSecurity = true,
+            UserID = "sa",
+            Password = "sa"
         };
     }
 }

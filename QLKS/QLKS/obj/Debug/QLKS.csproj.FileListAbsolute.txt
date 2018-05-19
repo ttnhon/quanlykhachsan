@@ -26,3 +26,4 @@ E:\Backup\Lap Trinh\PT&TK Phần Mềm\quanlykhachsan\QLKS\QLKS\obj\Debug\Quanly
 E:\Backup\Lap Trinh\PT&TK Phần Mềm\quanlykhachsan\QLKS\QLKS\obj\Debug\Quanlykhachhang.baml
 E:\Backup\Lap Trinh\PT&TK Phần Mềm\quanlykhachsan\QLKS\QLKS\obj\Debug\Quanlyloaiphong.baml
 E:\Backup\Lap Trinh\PT&TK Phần Mềm\quanlykhachsan\QLKS\QLKS\obj\Debug\ThuePhong.baml
+D:\HK2 nam ba\PTTKPM\quanlykhachsan\QLKS\QLKS\bin\Debug\QLKS.exe
