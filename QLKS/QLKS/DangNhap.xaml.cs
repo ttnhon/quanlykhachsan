@@ -26,7 +26,8 @@ namespace QLKS
         public DangNhap()
         {
             InitializeComponent();
-            
+            ThuePhong a = new ThuePhong();
+            a.Show();
         }
         
         private void Button_Click_1(object sender, RoutedEventArgs e)

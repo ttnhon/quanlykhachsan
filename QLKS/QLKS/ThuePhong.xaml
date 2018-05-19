@@ -8,7 +8,7 @@
         Title="ThuePhong" Height="541.5" Width="766.002">
     <Window.Resources>
         <ContextMenu x:Key="cmButton">
-            <MenuItem x:Name="thuephong" Header="Khách thuê phòng" />
+            <MenuItem x:Name="thuephong" Header="Khách thuê phòng" Click="MenuKhachThuePhong_Click" />
             <Separator />
             <MenuItem x:Name="thongtinkhach" Header="Thông tin khách" IsEnabled="False" />
             <MenuItem x:Name="capnhatdichvu" Header="Cập nhật dịch vụ" IsEnabled="False"/>
@@ -17,7 +17,7 @@
             <MenuItem x:Name="khachrangoai" Header="Khách ra ngoài" IsEnabled="False" />
             <Separator/>
             <MenuItem x:Name="datphong" Header="Đặt phòng" IsEnabled="True" Click="MenuDatPhong_Click" />
-            <MenuItem x:Name="chitietdatphong" Header="Chi tiết đặt phòng" IsEnabled="True" />
+            <MenuItem x:Name="chitietdatphong" Header="Chi tiết đặt phòng" IsEnabled="False" Click="MenuChiTietDatPhong_Click"/>
             <Separator/>
             <MenuItem x:Name="donphong" Header="Dọn phòng" Click="MenuDonPhong_Click" />
             <MenuItem x:Name="suaphong" Header="Sửa phòng" Click="MenuSuaPhong_Click" />
@@ -29,5 +29,11 @@
 
             </WrapPanel>
         </ScrollViewer>
+        <Button x:Name="btn_Capnhat" Background="{x:Null}" BorderBrush="{x:Null}" Margin="160,391,473,0" Click="btn_Capnhat_Click">
+            <StackPanel Height="100" Width="110">
+                <Image Height="64" Source="/QLKS;component/Hinh/icons8-update-filled-100.png"/>
+                <Label Content="Cập nhật" Height="39" FontSize="16" VerticalAlignment="Center" Margin="-15,0,-16,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontWeight="Bold"/>
+            </StackPanel>
+        </Button>
     </Grid>
 </Window>

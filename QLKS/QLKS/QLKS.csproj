@@ -54,6 +54,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ChiTietDatPhong.xaml.cs">
+      <DependentUpon>ChiTietDatPhong.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DAO\ThuePhongDAO.cs" />
     <Compile Include="DAO\TinhTrangDAO.cs" />
     <Compile Include="DAO\TrangThaiDAO.cs" />
     <Compile Include="DAO\XL_DULIEU.cs" />
@@ -61,6 +65,7 @@
     <Compile Include="DAO\DatPhongDAO.cs" />
     <Compile Include="DTO\DichVu.cs" />
     <Compile Include="DAO\DichVuDAO.cs" />
+    <Compile Include="DTO\ThuePhongDTO.cs" />
     <Compile Include="Helper\HashPassword.cs" />
     <Compile Include="DTO\KhachHang.cs" />
     <Compile Include="DAO\KhachHangDAO.cs" />
@@ -70,6 +75,12 @@
     <Compile Include="DAO\NguoiDungDAO.cs" />
     <Compile Include="DTO\Phong.cs" />
     <Compile Include="DAO\PhongDAO.cs" />
+    <Compile Include="KhachThuePhong.xaml.cs">
+      <DependentUpon>KhachThuePhong.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ManHinhDatPhong.xaml.cs">
+      <DependentUpon>ManHinhDatPhong.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Quanlydichvu.xaml.cs">
       <DependentUpon>Quanlydichvu.xaml</DependentUpon>
     </Compile>
@@ -88,9 +99,17 @@
     <Compile Include="Trangchu.xaml.cs">
       <DependentUpon>Trangchu.xaml</DependentUpon>
     </Compile>
+    <Page Include="ChiTietDatPhong.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="DangNhap.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="KhachThuePhong.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -109,6 +128,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="ManHinhDatPhong.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Quanlydichvu.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

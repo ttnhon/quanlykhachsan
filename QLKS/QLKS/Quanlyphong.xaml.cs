@@ -75,7 +75,7 @@ namespace QLKS
         {
             Trangchu tc = new Trangchu(NguoiDungDAO.GetHoTenByUser(account), account);
             tc.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void btn_ThemConfirm_Click(object sender, RoutedEventArgs e)
