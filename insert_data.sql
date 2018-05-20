@@ -26,11 +26,11 @@ values  (N'Trần Văn Tài','0123456789',N'Hà Nội','0906758412','1'),
 
 --Insert <TinhTrangPhong>
 insert into TinhTrangPhong(TinhTrang)
-values (N'Còn trống'), (N'Đang thuê'), (N'Ngưng sử dụng')
+values (N'Còn trống'), (N'Đang thuê'), (N'Ngưng sử dụng'), (N'Đặt trước')
 go
 --Insert <TrangThaiPhong>
 insert into TrangThaiPhong(TrangThai)
-values (N'Khách trong phòng'), (N'Khách ra ngoài'), (N'Đang dọn dẹp'), (N'Đang sửa chữa'), (N'Khác')
+values (N'Khách trong phòng'), (N'Khách ra ngoài'), (N'Đang dọn dẹp'), (N'Đang sửa chữa'), (N'')
 go
 --Insert <LoaiPhong>
 insert into LoaiPhong(MaLoai, TenLoai, MoTa, DonGia, SoNguoiToiDa, ConSuDung)
@@ -65,16 +65,16 @@ values	(101,'STD A','1','5',N'Không có'),
 
 --Insert <DichVu>
 insert into DichVu(TenDV, DonGia, GhiChu, ConSuDung)
-values	(N'Thức ăn',100000,N'Có nhiều món để chọn lựa', 1),
+values	(N'sting',10000,N'', 1),
 		(N'Điểm tâm sáng',100000,N'Có nhiều món để chọn lựa', 1),
-		(N'Thức ăn nhẹ',50000,N'Có nhiều món để chọn lựa', 1),
-		(N'Thức uống',50000,N'Có nhiều loại thức uống để chọn lựa', 1),
+		(N'nước suối',10000,N'', 1),
+		(N'bò húc',15000,N'', 1),
 		(N'Massage',200000,N'Không', 1),
 		(N'BCS',25000,N'Ưu tiên phòng cặp đôi', 1)
 go
 --Insert <DatPhong>
 insert into DatPhong(MaPhong, MaKhach, NgayThue)
-values (101, 1, '5/13/2018')
+values (101, 1, '5/30/2018')
 go
 --Insert <ChiTietDichVu>
 --Insert <ThuePhong>

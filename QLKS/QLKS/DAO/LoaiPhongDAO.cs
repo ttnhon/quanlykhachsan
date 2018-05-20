@@ -98,5 +98,14 @@ namespace QLKS.DAO
             cnn.Close();
             return affectCount;
         }
+        static XL_DULIEU xldulieu = new XL_DULIEU();
+        static public float GetDonGiaPhong(string text)
+        {
+            string sql = "select DonGia from LoaiPhong where MaLoai = '" + text + "' or TenLoai = '" + text + "'";
+            DataTable table = xldulieu.LoadData(sql);
+            if (table.Rows.Count < 1)
+                return 0;
+            return Convert.ToSingle(table.Rows[0][0]);
+        }
     }
 }

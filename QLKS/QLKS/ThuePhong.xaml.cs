@@ -32,10 +32,12 @@ namespace QLKS
             public string TrangThai;
         }
         DataTable tablePhong;
-        public ThuePhong()
+        string Account;
+        public ThuePhong(string account)
         {
             InitializeComponent();
             LoadPhong();
+            Account = account;
         }
 
         private void LoadPhong()
@@ -324,17 +326,23 @@ namespace QLKS
             int trangthai = PhongDAO.GetTrangThaiPhong(maPhong);
             if (tinhtrang == 2)
             {
-                return;
+                TraPhong traPhong = new TraPhong(maPhong);
+                traPhong.Show();
             }
-            KhachThuePhong khachThuePhong = new KhachThuePhong(maPhong);
-            khachThuePhong.Show();
+            else
+            {
+                KhachThuePhong khachThuePhong = new KhachThuePhong(maPhong);
+                khachThuePhong.Show();
+            }
 
             
         }
 
         private void btn_Home_Click(object sender, RoutedEventArgs e)
         {
-
+            Trangchu trangchu = new Trangchu(Account);
+            trangchu.Show();
+            this.Close();
         }
 
         private void MenuKhachRaNgoai_Click(object sender, RoutedEventArgs e)

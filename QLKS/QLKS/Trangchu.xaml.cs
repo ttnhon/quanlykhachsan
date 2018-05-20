@@ -39,7 +39,7 @@ namespace QLKS
 
         private void BtnThuePhong_Click(object sender, RoutedEventArgs e)
         {
-            ThuePhong thuePhong = new ThuePhong();
+            ThuePhong thuePhong = new ThuePhong(account);
             thuePhong.Show();
             this.Close();
         }

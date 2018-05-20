@@ -87,7 +87,7 @@ namespace QLKS
         {
             Trangchu tc = new Trangchu(account);
             tc.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void btnThem_Click(object sender, RoutedEventArgs e)

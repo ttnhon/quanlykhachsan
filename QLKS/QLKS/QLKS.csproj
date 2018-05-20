@@ -61,6 +61,7 @@
       <DependentUpon>ChiTietDatPhong.xaml</DependentUpon>
     </Compile>
     <Compile Include="DAO\ChiTietDichVuDAO.cs" />
+    <Compile Include="DAO\HoaDonDAO.cs" />
     <Compile Include="DAO\ThuePhongDAO.cs" />
     <Compile Include="DAO\TinhTrangDAO.cs" />
     <Compile Include="DAO\TrangThaiDAO.cs" />
@@ -73,6 +74,7 @@
     <Compile Include="DAO\DatPhongDAO.cs" />
     <Compile Include="DTO\DichVu.cs" />
     <Compile Include="DAO\DichVuDAO.cs" />
+    <Compile Include="DTO\HoaDon.cs" />
     <Compile Include="DTO\ThuePhongDTO.cs" />
     <Compile Include="Helper\HashPassword.cs" />
     <Compile Include="DTO\KhachHang.cs" />
@@ -109,6 +111,9 @@
     </Compile>
     <Compile Include="Trangchu.xaml.cs">
       <DependentUpon>Trangchu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TraPhong.xaml.cs">
+      <DependentUpon>TraPhong.xaml</DependentUpon>
     </Compile>
     <Page Include="CapNhatDichVu.xaml">
       <SubType>Designer</SubType>
@@ -176,6 +181,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Trangchu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TraPhong.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

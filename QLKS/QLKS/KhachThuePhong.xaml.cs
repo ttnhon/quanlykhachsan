@@ -38,6 +38,7 @@ namespace QLKS
             txtLoaiPhong.Text = lp.TenLoai;
             txtMaKhach.Text = (soLuongKhach + 1).ToString();
             cbbLoaiKhach.SelectedIndex = 0;
+            txtNgayThue.Text = DateTime.Now.ToString("MM-dd-yyyy HH:mm");
 
             //Chuyển thông tin đặt phòng sang
             DataTable table = DatPhongDAO.LoadByMaPhong(maPhong);
@@ -102,7 +103,7 @@ namespace QLKS
 
         private void BtnThuePhong_Click(object sender, RoutedEventArgs e)
         {
-            string ngayThue = dpNgayThue.Text;
+            string ngayThue = txtNgayThue.Text;
             
             int maPhong = Int32.Parse(txtMaPhong.Text);
             if (ngayThue.Equals(""))

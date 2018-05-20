@@ -49,6 +49,7 @@ namespace QLKS
             PhongDAO.SetTinhTrangPhong(phongMoi, 2);
             PhongDAO.SetTrangThaiPhong(phongMoi, 1);
             ThuePhongDAO.SuaMaPhong(phongCu, phongMoi);
+            ChiTietDichVuDAO.SuaMaPhong(phongCu, phongMoi);
             MessageBox.Show("Đổi phòng thành công!\r\nHãy bấm Cập nhật để tải lại danh sách phòng!", "Thông báo");
             this.Close();
             //đặt phòng cũ về tình trạng còn trống, trạng thái khác

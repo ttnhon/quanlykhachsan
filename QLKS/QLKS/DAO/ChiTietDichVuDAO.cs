@@ -26,5 +26,11 @@ namespace QLKS.DAO
                 "values ({0},{1},'{2}',{3},{4})", maDV, maKhach, DateTime.Now.ToString("MM-dd-yyyy HH:mm:ss.fff"), soLuong, maPhong);
             return xldulieu.Execute(sql);
         }
+        static public int SuaMaPhong(int phongCu, int phongMoi)
+        {
+            string sql = string.Format("update ChiTietDichVu set MaPhong = {0} where MaPhong = {1}",
+                phongMoi, phongCu);
+            return xldulieu.Execute(sql);
+        }
     }
 }

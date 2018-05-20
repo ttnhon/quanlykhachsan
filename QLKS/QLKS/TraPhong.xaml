@@ -1,0 +1,45 @@
+﻿<Window x:Class="QLKS.TraPhong"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:QLKS"
+        mc:Ignorable="d"
+        Title="TraPhong" Height="431.579" Width="739.473">
+    <Grid>
+        <Label Content="Mã phòng" HorizontalAlignment="Left" Height="31" Margin="10,10,0,0" VerticalAlignment="Top" Width="73"/>
+        <TextBox x:Name="txtMaPhong" HorizontalAlignment="Left" Height="31" Margin="119,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="142" IsReadOnly="True"/>
+        <Label Content="Loại phòng" HorizontalAlignment="Left" Height="31" Margin="284,10,0,0" VerticalAlignment="Top" Width="79"/>
+        <TextBox x:Name="txtLoaiPhong" HorizontalAlignment="Left" Height="31" Margin="399,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="142" IsReadOnly="True"/>
+        <Label Content="Ngày nhận phòng" HorizontalAlignment="Left" Height="31" Margin="9,46,0,0" VerticalAlignment="Top" Width="110"/>
+
+        <TextBox x:Name="txtNgayThue" IsReadOnly="True" HorizontalAlignment="Left" Height="31" Margin="119,46,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="142"/>
+        <Label Content="Ngày trả phòng" HorizontalAlignment="Left" Height="31" Margin="284,46,0,0" VerticalAlignment="Top" Width="110"/>
+        <TextBox x:Name="txtNgayTra" IsReadOnly="True" HorizontalAlignment="Left" Height="31" Margin="399,46,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="142" RenderTransformOrigin="0.399,0.431"/>
+        <DataGrid x:Name="dataGridDsKhach" Height="150" ItemsSource="{Binding KhachHang}" AutoGenerateColumns="False" Margin="10,95,380,0" VerticalAlignment="Top" >
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding MaKhach}" ClipboardContentBinding="{x:Null}" Header="Mã khách" Width="65"/>
+                <DataGridTextColumn Binding="{Binding TenKhach}" ClipboardContentBinding="{x:Null}" Header="Họ tên" Width="150"/>
+                <DataGridTextColumn Binding="{Binding DiaChi}" ClipboardContentBinding="{x:Null}" Header="Địa chỉ" Width="100"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <DataGrid x:Name="dgGioHang"  IsReadOnly="False" AutoGenerateColumns="False" Margin="358,95,10,0" Height="150" VerticalAlignment="Top">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding MaDV}" ClipboardContentBinding="{x:Null}" Header="Mã" Width="40"/>
+                <DataGridTextColumn Binding="{Binding TenDV}" ClipboardContentBinding="{x:Null}" Header="Tên dịch vụ" Width="100"/>
+                <DataGridTextColumn Binding="{Binding DonGia}" ClipboardContentBinding="{x:Null}" Header="Đơn giá" Width="60"/>
+                <DataGridTextColumn Binding="{Binding SoLuong}" ClipboardContentBinding="{x:Null}" Header="Số lượng" Width="60"/>
+                <DataGridTextColumn Binding="{Binding ThanhTien}" ClipboardContentBinding="{x:Null}" Header="Thành tiền" Width="80"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Label Content="Tiền dịch vụ" HorizontalAlignment="Left" Height="31" Margin="485,250,0,0" VerticalAlignment="Top" Width="83"/>
+        <Label Content="Tiền phòng" HorizontalAlignment="Left" Height="31" Margin="485,286,0,0" VerticalAlignment="Top" Width="83"/>
+        <Label Content="Thành tiền" HorizontalAlignment="Left" Height="31" Margin="485,322,0,0" VerticalAlignment="Top" Width="83"/>
+        <Button x:Name="BtnLuu" Content="Trả phòng" Foreground="White" Background="Green" HorizontalAlignment="Left" Margin="527,361,0,0" Width="92" Height="30" VerticalAlignment="Top" Click="BtnLuu_Click"/>
+        <Button x:Name="BtnThoat" Content="Thoát" Foreground="White" Background="Red" HorizontalAlignment="Left" Margin="629,361,0,0" Width="92" Click="BtnThoat_Click" Height="30" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtDichVu" HorizontalAlignment="Left" Height="31" Margin="573,250,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="135"/>
+        <TextBox x:Name="txtTienPhong" HorizontalAlignment="Left" Height="31" Margin="573,286,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="135"/>
+        <TextBox x:Name="txtThanhTien" Foreground="Red" HorizontalAlignment="Left" Height="31" Margin="573,322,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="135"/>
+
+    </Grid>
+</Window>
