@@ -4,15 +4,19 @@
 winexe
 C#
 .cs
-D:\HK2 nam ba\PTTKPM\quanlykhachsan\QLKS\QLKS\obj\Debug\
+E:\Backup\Lap Trinh\PT&TK Phần Mềm\quanlykhachsan\QLKS\QLKS\obj\Debug\
 QLKS
 none
 false
 DEBUG;TRACE
-D:\HK2 nam ba\PTTKPM\quanlykhachsan\QLKS\QLKS\App.xaml
+E:\Backup\Lap Trinh\PT&TK Phần Mềm\quanlykhachsan\QLKS\QLKS\App.xaml
 11-372782576
 
+<<<<<<< HEAD
 39-1963246317
+=======
+391819922853
+>>>>>>> f1bb51fdfda91a77e35299e53231cbe16922fc29
 131569487696
 ChiTietDatPhong.xaml;DangNhap.xaml;KhachThuePhong.xaml;MainWindow.xaml;ManHinhDatPhong.xaml;Quanlydichvu.xaml;Quanlykhachhang.xaml;Quanlyloaiphong.xaml;Quanlyphong.xaml;ThuePhong.xaml;Trangchu.xaml;
 

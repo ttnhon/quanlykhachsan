@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:QLKS"
         mc:Ignorable="d"
-        Title="ChiTietDatPhong" Height="394" Width="726">
+        Title="ChiTietDatPhong" Height="394" Width="726" WindowStartupLocation="CenterScreen">
     <Grid>
         <Canvas Margin="10,61,10,10">
             <DataGrid x:Name="dataGridDsKhach" Height="234" ItemsSource="{Binding KhachHang}" AutoGenerateColumns="False" VerticalAlignment="Top" SelectionChanged="dataGridDsKhach_SelectionChanged" Canvas.Left="380" Canvas.Top="48" Width="308">

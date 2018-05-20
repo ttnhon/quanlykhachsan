@@ -5,56 +5,77 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:QLKS"
         mc:Ignorable="d"
-        Title="Quản lý loại phòng" Height="350" Width="525">
+<<<<<<< HEAD
+        Title="Quản lý loại phòng" Height="403" Width="529">
+=======
+        Title="Quản lý loại phòng" Height="350" Width="525" WindowStartupLocation="CenterScreen">
+>>>>>>> 511cc3e205e3eb27448766530bebad0c4bfbf543
     <Grid>
-        <Canvas HorizontalAlignment="Left" Height="49" VerticalAlignment="Top" Width="518">
-            <Button Width="70" Height="49" Background="{x:Null}" BorderBrush="{x:Null}">
-                <StackPanel Height="48" Width="68">
-                    <Image Height="31" Source="Hinh/icons8-home-page-100.png" HorizontalAlignment="Center"/>
-                    <Label Content="Trang chủ" Height="25" FontSize="8" HorizontalAlignment="Center"/>
+        <Canvas HorizontalAlignment="Left" Height="53" VerticalAlignment="Top" Width="518">
+            <Button x:Name="btnTrangChu" Click="btnTrangChu_Click" Width="72" Height="60" Background="{x:Null}" BorderBrush="{x:Null}">
+                <StackPanel Height="60" Width="68">
+                    <Image Height="35" Source="Hinh/icons8-home-page-100.png" HorizontalAlignment="Center"/>
+                    <Label Content="Trang chủ" Height="20" FontSize="14" HorizontalAlignment="Center" Padding="0"/>
                 </StackPanel>
             </Button>
-            <Button Width="70" Height="49" Background="{x:Null}" BorderBrush="{x:Null}" Canvas.Left="70">
-                <StackPanel Height="48" Width="68">
-                    <Image Height="31" Source="Hinh/icons8-add-new-100.png" HorizontalAlignment="Center"/>
-                    <Label Content="Thêm mới" Height="25" FontSize="8" HorizontalAlignment="Center"/>
+            <Button x:Name="btnThem" Click="btnThem_Click" Width="72" Height="60" Background="{x:Null}" BorderBrush="{x:Null}" Canvas.Left="72">
+                <StackPanel Height="60" Width="68">
+                    <Image Height="35" Source="Hinh/icons8-add-new-100.png" HorizontalAlignment="Center"/>
+                    <Label Content="Thêm mới" Height="25" FontSize="14" HorizontalAlignment="Center" Padding="0"/>
                 </StackPanel>
             </Button>
-            <Button Width="70" Height="49" Background="{x:Null}" BorderBrush="{x:Null}" Canvas.Left="141">
-                <StackPanel Height="48" Width="68">
-                    <Image Height="31" Source="Hinh/icons8-close-window-100.png" HorizontalAlignment="Center"/>
-                    <Label Content="Xóa" Height="25" FontSize="8" HorizontalAlignment="Center"/>
+            <Button x:Name="btnSua" Click="btnSua_Click" Width="72" Height="60" Background="{x:Null}" BorderBrush="{x:Null}" Canvas.Left="145">
+                <StackPanel Height="60" Width="68">
+                    <Image Height="35" Source="Hinh/icons8-support-100.png" HorizontalAlignment="Center"/>
+                    <Label Content="Sửa" Height="25" FontSize="14" HorizontalAlignment="Center" Padding="0"/>
                 </StackPanel>
             </Button>
-            <TextBox Height="29" Canvas.Left="216" TextWrapping="Wrap" Text="TextBox" Canvas.Top="10" Width="227" FontSize="18"/>
-            <Button Width="70" Height="49" Background="{x:Null}" BorderBrush="{x:Null}" Canvas.Left="448">
-                <StackPanel Height="48" Width="68">
-                    <Image Height="31" Source="Hinh/icons8-google-web-search-100.png" HorizontalAlignment="Center"/>
-                    <Label Content="Tìm kiếm" Height="25" FontSize="8" HorizontalAlignment="Center"/>
+            <Button x:Name="btnCapNhat" Click="btnCapNhat_Click" Width="72" Height="60" Background="{x:Null}" BorderBrush="{x:Null}" Canvas.Left="217">
+                <StackPanel Height="60" Width="68">
+                    <Image Height="35" Source="Hinh/icons8-update-filled-100.png" HorizontalAlignment="Center"/>
+                    <Label Content="Cập nhật" Height="25" FontSize="14" HorizontalAlignment="Center" Padding="0"/>
                 </StackPanel>
+            </Button>
+            <TextBox x:Name="txtTimKiem" Height="29" Canvas.Left="371" TextWrapping="Wrap" Text="Mã loại" Canvas.Top="10" Width="87" FontSize="18"/>
+            <Button x:Name="btnTimKiem" Click="btnTimKiem_Click" Width="50" Height="50" Background="{x:Null}" BorderBrush="{x:Null}" Canvas.Left="448" Canvas.Top="-1">
+                <Image Height="45" Width="45" Source="Hinh/icons8-google-web-search-100.png" HorizontalAlignment="Center" RenderTransformOrigin="0.5,0.5">
+                    <Image.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="-10.676"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Image.RenderTransform>
+                </Image>
             </Button>
         </Canvas>
-        <Canvas HorizontalAlignment="Left" Height="272" Margin="0,49,0,-0.2" VerticalAlignment="Top" Width="276">
+        <Canvas HorizontalAlignment="Left" Height="296" Margin="0,67,0,0" VerticalAlignment="Top" Width="276">
             <Label Content="Mã loại phòng:" Canvas.Left="10" Canvas.Top="10"/>
             <Label Content="Tên loại phòng:" Canvas.Left="10" Canvas.Top="40"/>
             <Label Content="Mô tả:" Canvas.Left="10" Canvas.Top="71"/>
-            <Label Content="Đơn giá:" Canvas.Left="10" Canvas.Top="165"/>
-            <Label Content="Số người tối đa:" Canvas.Left="10" Canvas.Top="198"/>
-            <TextBox Height="23" Canvas.Left="121" TextWrapping="Wrap" Text="TextBox" Canvas.Top="10" Width="145" IsEnabled="False"/>
-            <TextBox Height="23" Canvas.Left="121" TextWrapping="Wrap" Text="TextBox" Canvas.Top="40" Width="145" IsReadOnly="True" IsEnabled="False"/>
-            <Button Content="Sửa" Canvas.Left="121" Canvas.Top="243" Width="75" IsEnabled="False"/>
-            <TextBox Height="89" Canvas.Left="121" TextWrapping="Wrap" Text="TextBox" Canvas.Top="71" Width="145" IsReadOnly="True" IsEnabled="False"/>
-            <TextBox Height="23" Canvas.Left="121" TextWrapping="Wrap" Text="TextBox" Canvas.Top="165" Width="145" IsReadOnly="True" IsEnabled="False"/>
-            <TextBox Height="23" Canvas.Left="121" TextWrapping="Wrap" Text="TextBox" Canvas.Top="198" Width="145" IsReadOnly="True" IsEnabled="False"/>
-            <Button Content="Danh sách phòng" Canvas.Left="10" Canvas.Top="243" Width="102"/>
-            <Button Content="Thêm" Canvas.Left="201" Canvas.Top="243" Width="75" IsEnabled="False"/>
+            <Label Content="Đơn giá:" Canvas.Left="10" Canvas.Top="170"/>
+            <Label Content="Số người tối đa:" Canvas.Left="10" Canvas.Top="203"/>
+            <Label Content="Khả dụng:" Canvas.Left="10" Canvas.Top="236"/>
+            <TextBox x:Name="txtMa" Height="23" Canvas.Left="121" TextWrapping="Wrap" Canvas.Top="10" Width="145" IsEnabled="False"/>
+            <TextBox x:Name="txtTen" Height="23" Canvas.Left="121" TextWrapping="Wrap" Canvas.Top="40" Width="145" IsEnabled="False"/>
+            <Button x:Name="btnApplySua" Content="Sửa" FontSize="14" Canvas.Left="110" Canvas.Top="269" Width="75" IsEnabled="False" Click="btnApplySua_Click"/>
+            <TextBox x:Name="txtMoTa" Height="89" Canvas.Left="121" TextWrapping="Wrap" Canvas.Top="71" Width="145" IsEnabled="False"/>
+            <TextBox x:Name="txtDonGia" Height="23" Canvas.Left="121" TextWrapping="Wrap" Canvas.Top="170" Width="145" IsEnabled="False"/>
+            <TextBox x:Name="txtSNTD" Height="23" Canvas.Left="121" TextWrapping="Wrap" Canvas.Top="203" Width="145" IsEnabled="False"/>
+            <ComboBox x:Name="cbcKhaDung" Canvas.Left="121" Canvas.Top="236" Width="145" IsEnabled="False" SelectedValuePath="Content">
+                <ComboBoxItem Content="Có" HorizontalAlignment="Left" Width="136"/>
+                <ComboBoxItem Content="Không" HorizontalAlignment="Left" Width="136"/>
+            </ComboBox>
+            <!--<Button Content="Danh sách phòng" Canvas.Left="10" Canvas.Top="264" Width="102"/>-->
+            <Button x:Name="btnApplyThem" Content="Thêm" FontSize="14" Canvas.Left="191" Canvas.Top="269" Width="75" IsEnabled="False" Click="btnApplyThem_Click"/>
         </Canvas>
-        <Canvas HorizontalAlignment="Left" Height="272" Margin="276,49,0,-0.2" VerticalAlignment="Top" Width="242">
-            <DataGrid Height="252" Width="222" Canvas.Left="10" Canvas.Top="10">
+        <Canvas HorizontalAlignment="Left" Height="296" Margin="275,67,0,0" VerticalAlignment="Top" Width="242">
+            <DataGrid x:Name="dgDanhSach" Height="286" Width="222" Canvas.Left="10" ItemsSource="{Binding XPath=LoaiPhong}" AutoGenerateColumns="False" SelectionChanged="dgDanhSach_SelectionChanged" Canvas.Top="10">
                 <DataGrid.Columns>
-                    <DataGridCheckBoxColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Mã loại phòng"/>
-                    <DataGridCheckBoxColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Tên"/>
-                    <DataGridCheckBoxColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Đơn giá"/>
+                    <DataGridTextColumn Binding="{Binding MaLoai}" ClipboardContentBinding="{x:Null}" Header="Mã loại" Width="50"/>
+                    <DataGridTextColumn Binding="{Binding TenLoai}" ClipboardContentBinding="{x:Null}" Header="Tên loại phòng" Width="*"/>
+                    <DataGridTextColumn Binding="{Binding DonGia}" ClipboardContentBinding="{x:Null}" Header="Đơn giá" Width="60"/>
                 </DataGrid.Columns>
             </DataGrid>
         </Canvas>

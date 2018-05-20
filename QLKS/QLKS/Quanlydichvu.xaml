@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:QLKS"
         mc:Ignorable="d"
-        Title="Quản lý dịch vụ" Height="391.177" Width="543.015">
+        Title="Quản lý dịch vụ" Height="391.177" Width="543.015" WindowStartupLocation="CenterScreen">
     <Grid>
         <Canvas HorizontalAlignment="Left" Height="65" VerticalAlignment="Top" Width="518">
             <Button x:Name="btnTrangChu" Width="70" Height="60" Background="{x:Null}" BorderBrush="{x:Null}" Click="btn_TrangChu_Click">
@@ -29,7 +29,7 @@
             <Button x:Name="btnCapNhat" Width="70" Height="60" Background="{x:Null}" BorderBrush="{x:Null}" Canvas.Left="211" Click="btn_CapNhat_Click">
                 <StackPanel Height="55" Width="68">
                     <Image Height="35" Source="Hinh/icons8-update-filled-100.png" HorizontalAlignment="Center"/>
-                    <Label Content="Cập nhật" Height="20" HorizontalAlignment="Center" Padding="0"/>
+                    <Label Content="Làm mới" Height="20" HorizontalAlignment="Center" Padding="0"/>
                 </StackPanel>
             </Button>
             <TextBox x:Name="txtTimKiem" Height="35" Canvas.Left="346" TextWrapping="Wrap" Text="Mã DV" Canvas.Top="10" Width="103" FontSize="18"/>
@@ -64,7 +64,7 @@
             <Button x:Name="btnApplySua" Content="Sửa" Canvas.Left="186" Canvas.Top="254" Width="80" Height="25" IsEnabled="False" Click="btnApplySua_Click" FontSize="14"/>
         </Canvas>
         <Canvas HorizontalAlignment="Left" Height="286" Margin="275,65,0,0" VerticalAlignment="Top" Width="242">
-            <DataGrid x:Name="dgDanhSach" Height="262" Width="222" Canvas.Left="10" ItemsSource="{Binding DichVu}" Canvas.Top="10" AutoGenerateColumns="False">
+            <DataGrid x:Name="dgDanhSach" Height="262" Width="222" Canvas.Left="10" ItemsSource="{Binding DichVu}" Canvas.Top="10" AutoGenerateColumns="False" SelectionChanged="grid_DichVu_SelectionChanged">
                 <DataGrid.Columns>
                     <DataGridTextColumn Binding="{Binding MaDV}" ClipboardContentBinding="{x:Null}" Header="Mã" Width="40"/>
                     <DataGridTextColumn Binding="{Binding TenDV}" ClipboardContentBinding="{x:Null}" Header="Tên dịch vụ" Width="*"/>

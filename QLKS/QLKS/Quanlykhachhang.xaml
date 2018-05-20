@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:QLKS"
         mc:Ignorable="d"
-        Title="Quản lý khách hàng" Height="378.659" Width="591.519">
+        Title="Quản lý khách hàng" Height="378.659" Width="591.519" WindowStartupLocation="CenterScreen">
     <Grid>
         <Canvas HorizontalAlignment="Left" Height="66" VerticalAlignment="Top" Width="577">
             <Button x:Name="btnTrangChu" Width="70" Height="60" Background="{x:Null}" BorderBrush="{x:Null}" Cursor="Hand" Click="Button_TrangChu">
@@ -74,7 +74,7 @@
             <Button x:Name="btnApplySua" Content="Sửa" Canvas.Left="167" Canvas.Top="243" Width="80" Height="25" IsEnabled="False" Click="btnApplySua_Click"/>
         </Canvas>
         <Canvas HorizontalAlignment="Left" Height="272" Margin="257,71,0,0" VerticalAlignment="Top" Width="320">
-            <DataGrid x:Name="dgDanhSach" Height="252" Width="302" Canvas.Left="10" Canvas.Top="10" ItemsSource="{Binding KhachHang}" AutoGenerateColumns="False">
+            <DataGrid x:Name="dgDanhSach" Height="252" Width="302" Canvas.Left="10" Canvas.Top="10" ItemsSource="{Binding KhachHang}" AutoGenerateColumns="False" SelectionChanged="dgDanhSach_SelectionChanged">
                 <DataGrid.Columns>
                     <DataGridTextColumn Binding="{Binding MaKhach}" ClipboardContentBinding="{x:Null}" Header="Mã khách" Width="65"/>
                     <DataGridTextColumn Binding="{Binding TenKhach}" ClipboardContentBinding="{x:Null}" Header="Họ tên" Width="*"/>

@@ -21,7 +21,7 @@
             </Button>
             <Button x:Name="btn_Capnhat" Background="{x:Null}" BorderBrush="{x:Null}" Margin="0,0,0,0.2" Width="110" Click="btn_Capnhat_Click">
                 <StackPanel Height="100" Width="110">
-                    <Image Height="64" Source="/QLKS;component/Hinh/icons8-update-filled-100.png"/>
+                    <Image Height="64" Source="Hinh/icons8-support-100.png"/>
                     <Label Content="Cập nhật" Height="39" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,-1,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="141" FontWeight="Bold"/>
                 </StackPanel>
             </Button>
@@ -31,8 +31,8 @@
                     <Label Content="Xóa" Height="38" FontSize="16" HorizontalAlignment="Center" Width="140" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontWeight="Bold"/>
                 </StackPanel>
             </Button>
-            <TextBox TextWrapping="Wrap" FontSize="48" Width="330" Margin="5,10,0,10" VerticalAlignment="Center"/>
-            <Button Background="{x:Null}" BorderBrush="{x:Null}" Width="110">
+            <TextBox x:Name="txt_search" TextWrapping="Wrap" FontSize="48" Width="330" Margin="5,10,0,10" VerticalAlignment="Center"/>
+            <Button x:Name="btn_search" Background="{x:Null}" BorderBrush="{x:Null}" Width="110" Click="btn_search_Click">
                 <StackPanel Height="100" Width="110">
                     <Image Height="63" Source="/QLKS;component/Hinh/icons8-google-web-search-100.png"/>
                     <Label Content="Tìm kiếm" Height="38" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" Width="140" FontWeight="Bold" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>

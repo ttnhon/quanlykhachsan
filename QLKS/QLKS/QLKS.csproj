@@ -225,5 +225,8 @@
   <ItemGroup>
     <Folder Include="GUI\" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Hinh\icons8-support-100.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

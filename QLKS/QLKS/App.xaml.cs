@@ -20,13 +20,18 @@ namespace QLKS
         {
 
             //DataSource = "NVPIT\\SQLEXPRESS",
+<<<<<<< HEAD
 
             DataSource = "REFICUL",
+=======
+            DataSource = "DESKTOP-VIIL54U\\HUYNHPHIPHUC",
+            //DataSource = "REFICUL",
+>>>>>>> f1bb51fdfda91a77e35299e53231cbe16922fc29
 
             InitialCatalog = "quanlykhachsan",
-            //IntegratedSecurity = true,
-            UserID = "sa",
-            Password = "sa"
+            IntegratedSecurity = true,
+            //UserID = "sa",
+            //Password = "sa"
         };
     }
 }

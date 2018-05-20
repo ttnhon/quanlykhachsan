@@ -309,5 +309,10 @@ namespace QLKS
 
             
         }
+
+        private void btn_Home_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
