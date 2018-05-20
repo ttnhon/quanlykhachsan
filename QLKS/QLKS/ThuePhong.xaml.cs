@@ -96,6 +96,7 @@ namespace QLKS
                 capnhatdichvu.IsEnabled = false;
                 doiphong.IsEnabled = false;
                 khachrangoai.IsEnabled = false;
+                khachrangoai.Header = "Khách ra ngoài";
                 datphong.IsEnabled = false;
                 datphong.Header = "Đặt phòng";
                 chitietdatphong.IsEnabled = false;
@@ -123,6 +124,7 @@ namespace QLKS
                 capnhatdichvu.IsEnabled = false;
                 doiphong.IsEnabled = false;
                 khachrangoai.IsEnabled = false;
+                khachrangoai.Header = "Khách ra ngoài";
                 datphong.IsEnabled = true;
                 chitietdatphong.IsEnabled = false;
                 donphong.IsEnabled = true;
@@ -140,6 +142,7 @@ namespace QLKS
                 capnhatdichvu.IsEnabled = false;
                 doiphong.IsEnabled = false;
                 khachrangoai.IsEnabled = false;
+                khachrangoai.Header = "Khách ra ngoài";
                 datphong.IsEnabled = true;
                 datphong.Header = "Hủy đặt phòng";
                 chitietdatphong.IsEnabled = true;
@@ -157,9 +160,28 @@ namespace QLKS
                 capnhatdichvu.IsEnabled = true;
                 doiphong.IsEnabled = true;
                 khachrangoai.IsEnabled = true;
+                khachrangoai.Header = "Khách ra ngoài";
                 datphong.IsEnabled = false;
                 chitietdatphong.IsEnabled = false;
                 donphong.IsEnabled = false;
+                suaphong.IsEnabled = false;
+                datphong.Header = "Đặt phòng";
+                donphong.Header = "Dọn phòng";
+                suaphong.Header = "Sửa phòng";
+                return;
+            }
+            if(trangThai==2)
+            {
+                thuephong.IsEnabled = false;
+                thuephong.Header = "Trả phòng";
+                thongtinkhach.IsEnabled = true;
+                capnhatdichvu.IsEnabled = false;
+                doiphong.IsEnabled = false;
+                khachrangoai.IsEnabled = true;
+                khachrangoai.Header = "Khách quay lại";
+                datphong.IsEnabled = false;
+                chitietdatphong.IsEnabled = false;
+                donphong.IsEnabled = true;
                 suaphong.IsEnabled = false;
                 datphong.Header = "Đặt phòng";
                 donphong.Header = "Dọn phòng";
@@ -313,6 +335,36 @@ namespace QLKS
         private void btn_Home_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void MenuKhachRaNgoai_Click(object sender, RoutedEventArgs e)
+        {
+            MenuItem mnu = sender as MenuItem;
+            ContextMenu menu = (ContextMenu)mnu.Parent;
+            Button button = menu.PlacementTarget as Button;
+            int maPhong = Int32.Parse(button.Name.Substring(1));
+            int tinhtrang = PhongDAO.GetTinhTrangPhong(maPhong);
+            int trangthai = PhongDAO.GetTrangThaiPhong(maPhong);
+            if (trangthai == 2)
+            {
+                PhongDAO.SetTrangThaiPhong(maPhong, 1);
+            }
+            else
+                PhongDAO.SetTrangThaiPhong(maPhong, 2);
+            wrapPanel.Children.Clear();
+            LoadPhong();
+        }
+
+        private void MenuDoiPhong_Click(object sender, RoutedEventArgs e)
+        {
+            MenuItem mnu = sender as MenuItem;
+            ContextMenu menu = (ContextMenu)mnu.Parent;
+            Button button = menu.PlacementTarget as Button;
+            int maPhong = Int32.Parse(button.Name.Substring(1));
+            int tinhtrang = PhongDAO.GetTinhTrangPhong(maPhong);
+            int trangthai = PhongDAO.GetTrangThaiPhong(maPhong);
+            DoiPhong doiPhong = new DoiPhong(maPhong);
+            doiPhong.Show();
         }
     }
 }

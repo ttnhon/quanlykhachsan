@@ -13,8 +13,8 @@
             <MenuItem x:Name="thongtinkhach" Header="Thông tin khách" IsEnabled="False" />
             <MenuItem x:Name="capnhatdichvu" Header="Cập nhật dịch vụ" IsEnabled="False"/>
             <Separator />
-            <MenuItem x:Name="doiphong" Header="Đổi phòng" IsEnabled="False" />
-            <MenuItem x:Name="khachrangoai" Header="Khách ra ngoài" IsEnabled="False" />
+            <MenuItem x:Name="doiphong" Header="Đổi phòng" IsEnabled="False" Click="MenuDoiPhong_Click" />
+            <MenuItem x:Name="khachrangoai" Header="Khách ra ngoài" IsEnabled="False" Click="MenuKhachRaNgoai_Click" />
             <Separator/>
             <MenuItem x:Name="datphong" Header="Đặt phòng" IsEnabled="True" Click="MenuDatPhong_Click" />
             <MenuItem x:Name="chitietdatphong" Header="Chi tiết đặt phòng" IsEnabled="False" Click="MenuChiTietDatPhong_Click"/>

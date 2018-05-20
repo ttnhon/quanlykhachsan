@@ -75,5 +75,11 @@ namespace QLKS.DAO
             else
                 return table.Rows[0].Field<int>(0);
         }
+        static public int SuaMaPhong(int phongCu, int phongMoi)
+        {
+            string sql = string.Format("update ThuePhong set MaPhong = {0} where MaPhong = {1}", 
+                phongMoi, phongCu);
+            return xldulieu.Execute(sql);
+        }
     }
 }

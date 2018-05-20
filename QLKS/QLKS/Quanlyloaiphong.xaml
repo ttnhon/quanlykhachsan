@@ -5,11 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:QLKS"
         mc:Ignorable="d"
-<<<<<<< HEAD
-        Title="Quản lý loại phòng" Height="403" Width="529">
-=======
         Title="Quản lý loại phòng" Height="350" Width="525" WindowStartupLocation="CenterScreen">
->>>>>>> 511cc3e205e3eb27448766530bebad0c4bfbf543
+
     <Grid>
         <Canvas HorizontalAlignment="Left" Height="53" VerticalAlignment="Top" Width="518">
             <Button x:Name="btnTrangChu" Click="btnTrangChu_Click" Width="72" Height="60" Background="{x:Null}" BorderBrush="{x:Null}">
@@ -36,14 +33,14 @@
                     <Label Content="Cập nhật" Height="25" FontSize="14" HorizontalAlignment="Center" Padding="0"/>
                 </StackPanel>
             </Button>
-            <TextBox x:Name="txtTimKiem" Height="29" Canvas.Left="371" TextWrapping="Wrap" Text="Mã loại" Canvas.Top="10" Width="87" FontSize="18"/>
+            <TextBox x:Name="txtTimKiem" Height="29" Canvas.Left="361" TextWrapping="Wrap" Text="Mã loại" Canvas.Top="10" Width="87" FontSize="18"/>
             <Button x:Name="btnTimKiem" Click="btnTimKiem_Click" Width="50" Height="50" Background="{x:Null}" BorderBrush="{x:Null}" Canvas.Left="448" Canvas.Top="-1">
                 <Image Height="45" Width="45" Source="Hinh/icons8-google-web-search-100.png" HorizontalAlignment="Center" RenderTransformOrigin="0.5,0.5">
                     <Image.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform/>
                             <SkewTransform/>
-                            <RotateTransform Angle="-10.676"/>
+                            <RotateTransform Angle="-0.196"/>
                             <TranslateTransform/>
                         </TransformGroup>
                     </Image.RenderTransform>

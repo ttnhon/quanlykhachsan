@@ -61,6 +61,9 @@
     <Compile Include="DAO\TinhTrangDAO.cs" />
     <Compile Include="DAO\TrangThaiDAO.cs" />
     <Compile Include="DAO\XL_DULIEU.cs" />
+    <Compile Include="DoiPhong.xaml.cs">
+      <DependentUpon>DoiPhong.xaml</DependentUpon>
+    </Compile>
     <Compile Include="DTO\DatPhong.cs" />
     <Compile Include="DAO\DatPhongDAO.cs" />
     <Compile Include="DTO\DichVu.cs" />
@@ -106,6 +109,10 @@
     <Page Include="DangNhap.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DoiPhong.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="KhachThuePhong.xaml">
       <SubType>Designer</SubType>
@@ -227,6 +234,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Hinh\icons8-support-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Hinh\icons8-chevron-right-32.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

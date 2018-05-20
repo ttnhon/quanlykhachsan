@@ -37,7 +37,7 @@ namespace QLKS
             LoaiPhong lp = LoaiPhongDAO.LoadOne(p.LoaiPhong);
             txtLoaiPhong.Text = lp.TenLoai;
             txtMaKhach.Text = (soLuongKhach+1).ToString();
-            cbbLoaiKhach.SelectedIndex = 1;
+            cbbLoaiKhach.SelectedIndex = 0;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -121,7 +121,7 @@ namespace QLKS
                 return;
             }
             PhongDAO.SetTinhTrangPhong(maPhong, 4);
-            MessageBox.Show("Đặt phòng thành công", "Thông báo");
+            MessageBox.Show("Đặt phòng thành công!\r\nHãy bấm Cập nhật để tải lại danh sách phòng!", "Thông báo");
             this.Close();
         }
 

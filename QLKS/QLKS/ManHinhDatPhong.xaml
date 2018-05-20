@@ -48,7 +48,7 @@
                 <Label Content="Loại khách" HorizontalAlignment="Left" Height="40" Margin="10,203,0,0" VerticalAlignment="Top" Width="75"/>
                 <TextBox x:Name="txtDiaChi" HorizontalAlignment="Left" Height="34" Margin="142,125,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="194"/>
                 <TextBox x:Name="txtDienThoai" HorizontalAlignment="Left" Height="34" Margin="142,164,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="194"/>
-                <ComboBox x:Name="cbbLoaiKhach" ItemsSource="{Binding}" DisplayMemberPath="LoaiKhach" SelectedItem ="{Binding MaLoai}" HorizontalAlignment="Left" Height="31" Margin="142,203,0,0" VerticalAlignment="Top" Width="161"/>
+                <ComboBox x:Name="cbbLoaiKhach" ItemsSource="{Binding}" DisplayMemberPath="LoaiKhach" HorizontalAlignment="Left" Height="31" Margin="142,203,0,0" VerticalAlignment="Top" Width="161"/>
                 <Button Content="Thêm" HorizontalAlignment="Left" Height="34" Margin="106,248,0,0" VerticalAlignment="Top" Width="121" Click="Button_Click"/>
                 <TextBox x:Name="txtTimKiem" Height="30" Margin="477,10,10,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" TextChanged="txtTimKiem_TextChanged"/>
                 <Label Content="Tìm theo tên khách" HorizontalAlignment="Left" Height="30" Margin="355,10,0,0" VerticalAlignment="Top" Width="117"/>

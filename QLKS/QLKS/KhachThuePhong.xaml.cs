@@ -37,7 +37,7 @@ namespace QLKS
             LoaiPhong lp = LoaiPhongDAO.LoadOne(p.LoaiPhong);
             txtLoaiPhong.Text = lp.TenLoai;
             txtMaKhach.Text = (soLuongKhach + 1).ToString();
-            cbbLoaiKhach.SelectedIndex = 1;
+            cbbLoaiKhach.SelectedIndex = 0;
 
             //Chuyển thông tin đặt phòng sang
             DataTable table = DatPhongDAO.LoadByMaPhong(maPhong);
@@ -141,7 +141,7 @@ namespace QLKS
                 DatPhongDAO.Delete(maPhong);
             }
 
-            MessageBox.Show("Đăng ký thuê phòng thành công", "Thông báo");
+            MessageBox.Show("Đăng ký thuê phòng thành công!\r\nHãy bấm Cập nhật để tải lại danh sách phòng!", "Thông báo");
             this.Close();
         }
 
