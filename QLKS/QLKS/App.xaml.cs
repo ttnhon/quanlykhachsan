@@ -19,8 +19,8 @@ namespace QLKS
         static public SqlConnectionStringBuilder sConnB = new SqlConnectionStringBuilder()
         {
 
-            //DataSource = "NVPIT\\SQLEXPRESS",
-            DataSource = "DESKTOP-VIIL54U\\HUYNHPHIPHUC",
+            DataSource = "NVPIT\\SQLEXPRESS",
+            //DataSource = "DESKTOP-VIIL54U\\HUYNHPHIPHUC",
             //DataSource = "REFICUL",
 
             InitialCatalog = "quanlykhachsan",
