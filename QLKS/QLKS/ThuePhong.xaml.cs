@@ -366,5 +366,29 @@ namespace QLKS
             DoiPhong doiPhong = new DoiPhong(maPhong);
             doiPhong.Show();
         }
+
+        private void MenuThongTinKhach_Click(object sender, RoutedEventArgs e)
+        {
+            MenuItem mnu = sender as MenuItem;
+            ContextMenu menu = (ContextMenu)mnu.Parent;
+            Button button = menu.PlacementTarget as Button;
+            int maPhong = Int32.Parse(button.Name.Substring(1));
+            int tinhtrang = PhongDAO.GetTinhTrangPhong(maPhong);
+            int trangthai = PhongDAO.GetTrangThaiPhong(maPhong);
+            ThongTinKhachHang thongTinKhach = new ThongTinKhachHang(maPhong);
+            thongTinKhach.Show();
+        }
+
+        private void MenuCapNhatDichVu_Click(object sender, RoutedEventArgs e)
+        {
+            MenuItem mnu = sender as MenuItem;
+            ContextMenu menu = (ContextMenu)mnu.Parent;
+            Button button = menu.PlacementTarget as Button;
+            int maPhong = Int32.Parse(button.Name.Substring(1));
+            int tinhtrang = PhongDAO.GetTinhTrangPhong(maPhong);
+            int trangthai = PhongDAO.GetTrangThaiPhong(maPhong);
+            CapNhatDichVu capNhatDichVu = new CapNhatDichVu(maPhong);
+            capNhatDichVu.Show();
+        }
     }
 }

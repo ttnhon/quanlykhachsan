@@ -59,7 +59,7 @@ namespace QLKS
         {
             Trangchu tc = new Trangchu(account);
             tc.Show();
-            this.Hide();
+            this.Close();
             //MessageBox.Show("Button Trangchu");
         }
 

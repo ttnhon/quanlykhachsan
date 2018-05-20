@@ -61,7 +61,7 @@ namespace QLKS
             //MessageBox.Show("Thực thi nút Trang chủ!");
             Trangchu tc = new Trangchu(account);
             tc.Show();
-            this.Hide();
+            this.Close();
         }
         private void btn_Them_Click(object sender, RoutedEventArgs e)
         {

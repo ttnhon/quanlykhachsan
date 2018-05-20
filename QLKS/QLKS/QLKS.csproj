@@ -54,9 +54,13 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="CapNhatDichVu.xaml.cs">
+      <DependentUpon>CapNhatDichVu.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ChiTietDatPhong.xaml.cs">
       <DependentUpon>ChiTietDatPhong.xaml</DependentUpon>
     </Compile>
+    <Compile Include="DAO\ChiTietDichVuDAO.cs" />
     <Compile Include="DAO\ThuePhongDAO.cs" />
     <Compile Include="DAO\TinhTrangDAO.cs" />
     <Compile Include="DAO\TrangThaiDAO.cs" />
@@ -64,6 +68,7 @@
     <Compile Include="DoiPhong.xaml.cs">
       <DependentUpon>DoiPhong.xaml</DependentUpon>
     </Compile>
+    <Compile Include="DTO\ChiTietDichVu.cs" />
     <Compile Include="DTO\DatPhong.cs" />
     <Compile Include="DAO\DatPhongDAO.cs" />
     <Compile Include="DTO\DichVu.cs" />
@@ -96,12 +101,19 @@
     <Compile Include="Quanlyphong.xaml.cs">
       <DependentUpon>Quanlyphong.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ThongTinKhachHang.xaml.cs">
+      <DependentUpon>ThongTinKhachHang.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ThuePhong.xaml.cs">
       <DependentUpon>ThuePhong.xaml</DependentUpon>
     </Compile>
     <Compile Include="Trangchu.xaml.cs">
       <DependentUpon>Trangchu.xaml</DependentUpon>
     </Compile>
+    <Page Include="CapNhatDichVu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="ChiTietDatPhong.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -152,6 +164,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Quanlyphong.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ThongTinKhachHang.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

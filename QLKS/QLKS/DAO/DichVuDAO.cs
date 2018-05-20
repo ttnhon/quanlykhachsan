@@ -98,5 +98,16 @@ namespace QLKS.DAO
             cnn.Close();
             return affectCount;
         }
+        static XL_DULIEU xldulieu = new XL_DULIEU();
+        static public DataTable TimTheoTen(string tenDv)
+        {
+            string sql = "select * from DichVu where TenDV like N'%" + tenDv + "%' and ConSuDung = 1";
+            return xldulieu.LoadData(sql);
+        }
+        static public DataTable LoadConSuDung()
+        {
+            string sql = "select * from DichVu where ConSuDung = 1";
+            return xldulieu.LoadData(sql);
+        }
     }
 }

@@ -39,12 +39,12 @@
                 </StackPanel>
             </Button>
             <TextBox x:Name="txtTimKiem" Height="30" Canvas.Left="439" TextWrapping="Wrap" Canvas.Top="10" Width="85" FontSize="18"/>
-            <Button x:Name="btnTimKiem" Background="{x:Null}" BorderBrush="{x:Null}" Canvas.Left="518" Click="Button_TimKiem" Cursor="Hand" RenderTransformOrigin="0.5,0.5" Canvas.Top="1">
+            <Button x:Name="btnTimKiem" Background="{x:Null}" BorderBrush="{x:Null}" Canvas.Left="524" Click="Button_TimKiem" Cursor="Hand" RenderTransformOrigin="0.5,0.5" Canvas.Top="2">
                 <Button.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
                         <SkewTransform/>
-                        <RotateTransform Angle="-9.181"/>
+                        <RotateTransform Angle="-0.778"/>
                         <TranslateTransform/>
                     </TransformGroup>
                 </Button.RenderTransform>

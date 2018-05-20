@@ -10,8 +10,8 @@
         <ContextMenu x:Key="cmButton">
             <MenuItem x:Name="thuephong" Header="Khách thuê phòng" Click="MenuKhachThuePhong_Click" />
             <Separator />
-            <MenuItem x:Name="thongtinkhach" Header="Thông tin khách" IsEnabled="False" />
-            <MenuItem x:Name="capnhatdichvu" Header="Cập nhật dịch vụ" IsEnabled="False"/>
+            <MenuItem x:Name="thongtinkhach" Header="Thông tin khách" IsEnabled="False" Click="MenuThongTinKhach_Click" />
+            <MenuItem x:Name="capnhatdichvu" Header="Cập nhật dịch vụ" IsEnabled="False" Click="MenuCapNhatDichVu_Click"/>
             <Separator />
             <MenuItem x:Name="doiphong" Header="Đổi phòng" IsEnabled="False" Click="MenuDoiPhong_Click" />
             <MenuItem x:Name="khachrangoai" Header="Khách ra ngoài" IsEnabled="False" Click="MenuKhachRaNgoai_Click" />
