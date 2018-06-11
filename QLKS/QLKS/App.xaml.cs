@@ -18,9 +18,10 @@ namespace QLKS
     {
         static public SqlConnectionStringBuilder sConnB = new SqlConnectionStringBuilder()
         {
-            DataSource = "REFICUL",
+            //DataSource = "REFICUL",
+            DataSource = "DESKTOP-VIIL54U\\HUYNHPHIPHUC",
             InitialCatalog = "quanlykhachsan",
-            //IntegratedSecurity = true,
+            IntegratedSecurity = true,
             UserID = "sa",
             Password = "sa"
         };

@@ -40,6 +40,21 @@ namespace QLKS.DAO
             return table.Rows[0].Field<string>(0);
         }
 
+        static public string GetLoaiNguoiDungByUser(string user)
+        {
+            SqlConnection cnn = new SqlConnection(App.sConnB.ConnectionString);
+            string sql = "select LoaiNguoiDung from NguoiDung where TenDangNhap = '" + user + "'";
+            SqlDataAdapter da = new SqlDataAdapter(sql, cnn);
+            DataTable table = new DataTable();
+            da.Fill(table);
+
+            if (table.Rows.Count < 1)
+                return null;
+
+            return table.Rows[0].Field<string>(0);
+        }
+
+
         static public int GetPhanQuyenByUser(string user)
         {
             SqlConnection cnn = new SqlConnection(App.sConnB.ConnectionString);

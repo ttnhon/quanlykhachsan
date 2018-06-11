@@ -14,7 +14,8 @@
         </Grid.RowDefinitions>
         <WrapPanel Height="69" VerticalAlignment="Top" Width="894" Margin="0,0,-0.4,0" Grid.RowSpan="2" HorizontalAlignment="Left">
             <Label Content="Xin chào:" HorizontalAlignment="Left" Height="69" VerticalAlignment="Top" Width="109" FontSize="24" VerticalContentAlignment="Center"/>
-            <Label x:Name="LabelName" Content="Label" HorizontalAlignment="Left" Height="69" VerticalAlignment="Top" Width="733" FontWeight="Bold" FontSize="24" VerticalContentAlignment="Center"/>
+            <Label x:Name="LabelChucVu" Content="Label" HorizontalAlignment="Left" Height="69" VerticalAlignment="Top" Width="139" FontWeight="Bold" FontSize="24" VerticalContentAlignment="Center"/>
+            <Label x:Name="LabelName" Content="Label" HorizontalAlignment="Left" Height="69" VerticalAlignment="Top" Width="323" FontWeight="Bold" FontSize="24" VerticalContentAlignment="Center"/>
         </WrapPanel>
         <WrapPanel Margin="0,0.2,-0.4,0.4" Grid.Row="1" Grid.RowSpan="2">
             <Button x:Name="btnThuePhong" Background="{x:Null}" BorderBrush="{x:Null}" Click="BtnThuePhong_Click" Width="140" Height="140" VerticalAlignment="Center" HorizontalContentAlignment="Center" Margin="20,10,10,0">
@@ -50,7 +51,7 @@
             <Button x:Name="btnDangXuat" Background="{x:Null}" BorderBrush="{x:Null}" Width="140" Height="140" VerticalAlignment="Center" HorizontalContentAlignment="Center" Margin="20,10,10,0" Click="btnDangXuat_Click">
                 <StackPanel Height="160" Width="140">
                     <Image Height="100" Source="Hinh/icons8-exit-100.png"/>
-                    <Label Content="ĐANG XUẤT" HorizontalAlignment="Center" FontSize="16" FontWeight="Bold" Height="42" Width="140" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                    <Label Content="ĐĂNG XUẤT" HorizontalAlignment="Center" FontSize="16" FontWeight="Bold" Height="42" Width="140" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
                 </StackPanel>
             </Button>
         </WrapPanel>

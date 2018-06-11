@@ -82,6 +82,11 @@ namespace QLKS
         {
             try
             {
+                if(txt_maphong.Text == "")
+                {
+                    MessageBox.Show("Vui lòng nhập mã phòng.");
+                    return;
+                }
                 Phong p = new Phong();
                 DataRowView rowview_lp = cb_loaiphong.SelectedItem as DataRowView;
                 DataRowView rowview_tt = cb_tinhtrang.SelectedItem as DataRowView;
@@ -149,6 +154,7 @@ namespace QLKS
                 {
                     btn_Them.IsEnabled = true;
                     btn_ThemConfirm.Visibility = Visibility.Hidden;
+                    btn_Huy.Visibility = Visibility.Hidden;
                     UnenableText();
                 }
                 Phong p = new Phong();

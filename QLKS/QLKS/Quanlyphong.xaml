@@ -25,12 +25,7 @@
                     <Label Content="Cập nhật" Height="39" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,-1,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="141" FontWeight="Bold"/>
                 </StackPanel>
             </Button>
-            <Button x:Name="btn_Xoa" Background="{x:Null}" BorderBrush="{x:Null}" Margin="0,0,0,0.2" Width="110" Click="btn_Xoa_Click">
-                <StackPanel Height="100" Width="110">
-                    <Image Height="64" Source="/QLKS;component/Hinh/icons8-close-window-100.png"/>
-                    <Label Content="Xóa" Height="38" FontSize="16" HorizontalAlignment="Center" Width="140" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontWeight="Bold"/>
-                </StackPanel>
-            </Button>
+           
             <TextBox x:Name="txt_search" TextWrapping="Wrap" FontSize="48" Width="330" Margin="5,10,0,10" VerticalAlignment="Center"/>
             <Button x:Name="btn_search" Background="{x:Null}" BorderBrush="{x:Null}" Width="110" Click="btn_search_Click">
                 <StackPanel Height="100" Width="110">
@@ -61,7 +56,6 @@
                 <TextBox x:Name="txt_ghichu" TextWrapping="Wrap" IsEnabled="False" Width="280" Height="150" FontSize="20" HorizontalAlignment="Center" VerticalScrollBarVisibility="Auto"/>
             </WrapPanel>
             <WrapPanel Height="66" VerticalAlignment="Center" Width="416" HorizontalAlignment="Center">
-                <Button Content="Danh sách dịch vụ" Height="60" Width="200" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" Margin="5,0" Padding="1"/>
                 <Button x:Name="btn_Huy" Content="Hủy" IsHitTestVisible="True" Height="60" Width="90" FontSize="20" FontWeight="Bold" Margin="5,0,10,0" Visibility="Hidden" Click="btn_Huy_Click"/>
                 <Canvas Height="60" Width="92">
                     <Button x:Name="btn_CapnhatConfirm" Content="Cập nhật" IsHitTestVisible="True" Height="60" Width="90" VerticalAlignment="Center" VerticalContentAlignment="Center" FontSize="20" FontWeight="Bold" Click="btn_CapnhatConfirm_Click" Canvas.Left="2" Visibility="Hidden"/>

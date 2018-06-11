@@ -62,9 +62,9 @@ namespace QLKS.DAO
                 "from Phong p join LoaiPhong lp on p.LoaiPhong = lp.MaLoai " +
                 "join TinhTrangPhong tt on p.TinhTrang = tt.MaTT " +
                 "join TrangThaiPhong tth on p.TrangThai = tth.MaTT " +
-                "where lp.TenLoai like N'" + text + "%' " +
-                "or tt.TinhTrang like N'" + text + "%' " +
-                "or tth.TrangThai like N'" + text + "%'";
+                "where lp.TenLoai like N'%" + text + "%' " +
+                "or tt.TinhTrang like N'%" + text + "%' " +
+                "or tth.TrangThai like N'%" + text + "%'";
             SqlDataAdapter da = new SqlDataAdapter(sql, cnn);
             DataTable table = new DataTable();
             da.Fill(table);

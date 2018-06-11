@@ -72,10 +72,19 @@ namespace QLKS
         public Trangchu(string account)
         {
             InitializeComponent();
-            //this.name = name;
             this.account = account;
             string name = NguoiDungDAO.GetHoTenByUser(account);
+            int chucvu = NguoiDungDAO.GetPhanQuyenByUser(account);
+            string loaind = NguoiDungDAO.GetLoaiNguoiDungByUser(account);
             LabelName.Content = name;
+            LabelChucVu.Content = loaind;
+            if(chucvu == 3)
+            {
+                btnKhachHang.Visibility = Visibility.Hidden;
+                btnQuanLyPhong.Visibility = Visibility.Hidden;
+                btnQuanLyLoaiPhong.Visibility = Visibility.Hidden;
+                btnDichVu.Visibility = Visibility.Hidden;
+            }
         }
     }
 }
