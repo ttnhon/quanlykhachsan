@@ -33,6 +33,7 @@ E:\Backup\Lap Trinh\PT&TK Phần Mềm\quanlykhachsan\QLKS\QLKS\obj\Debug\QLKS.c
 E:\Backup\Lap Trinh\PT&TK Phần Mềm\quanlykhachsan\QLKS\QLKS\obj\Debug\ChiTietDatPhong.baml
 E:\Backup\Lap Trinh\PT&TK Phần Mềm\quanlykhachsan\QLKS\QLKS\obj\Debug\KhachThuePhong.baml
 E:\Backup\Lap Trinh\PT&TK Phần Mềm\quanlykhachsan\QLKS\QLKS\obj\Debug\ManHinhDatPhong.baml
+<<<<<<< HEAD
 D:\HK2 nam ba\PTTKPM\quanlykhachsan\QLKS\QLKS\bin\Debug\QLKS.exe
 E:\Backup\Lap Trinh\PT&TK Phần Mềm\quanlykhachsan\QLKS\QLKS\obj\Debug\CapNhatDichVu.g.cs
 E:\Backup\Lap Trinh\PT&TK Phần Mềm\quanlykhachsan\QLKS\QLKS\obj\Debug\DoiPhong.g.cs
@@ -42,3 +43,5 @@ E:\Backup\Lap Trinh\PT&TK Phần Mềm\quanlykhachsan\QLKS\QLKS\obj\Debug\CapNha
 E:\Backup\Lap Trinh\PT&TK Phần Mềm\quanlykhachsan\QLKS\QLKS\obj\Debug\DoiPhong.baml
 E:\Backup\Lap Trinh\PT&TK Phần Mềm\quanlykhachsan\QLKS\QLKS\obj\Debug\ThongTinKhachHang.baml
 E:\Backup\Lap Trinh\PT&TK Phần Mềm\quanlykhachsan\QLKS\QLKS\obj\Debug\TraPhong.baml
+=======
+>>>>>>> 937b6990de043a19f7c68598e3be8b5fe712d171
