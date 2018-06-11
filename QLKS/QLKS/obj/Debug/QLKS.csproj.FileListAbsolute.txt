@@ -33,4 +33,3 @@ E:\Backup\Lap Trinh\PT&TK Phần Mềm\quanlykhachsan\QLKS\QLKS\obj\Debug\QLKS.c
 E:\Backup\Lap Trinh\PT&TK Phần Mềm\quanlykhachsan\QLKS\QLKS\obj\Debug\ChiTietDatPhong.baml
 E:\Backup\Lap Trinh\PT&TK Phần Mềm\quanlykhachsan\QLKS\QLKS\obj\Debug\KhachThuePhong.baml
 E:\Backup\Lap Trinh\PT&TK Phần Mềm\quanlykhachsan\QLKS\QLKS\obj\Debug\ManHinhDatPhong.baml
-D:\HK2 nam ba\PTTKPM\quanlykhachsan\QLKS\QLKS\bin\Debug\QLKS.exe
