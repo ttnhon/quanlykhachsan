@@ -108,7 +108,7 @@ namespace QLKS.DAO
             if (LoadOne(p.MaPhong) == null)
                 return 0;
             SqlConnection cnn = new SqlConnection(App.sConnB.ConnectionString);
-            string sql = string.Format("Delete from Phong where MaPhong = '{0}'", p.MaPhong);
+            string sql = string.Format("Delete from Phong where MaPhong = {0}", p.MaPhong);
             SqlCommand comm = new SqlCommand(sql, cnn);
 
             cnn.Open();
